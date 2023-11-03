@@ -1,3 +1,567 @@
-<h1> Welcome to Rackspace Spot</h1>
-<img src="rackspace.jpg" alt="RXT">
-<p><a href="ui">Login to spot</a></p>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://rackspace.com/themes/custom/hansel/favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>Rackspace Spot | Rackspace</title>
+    <link rel="stylesheet" media="all" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="mega-nav"  class="nav" role="navigation" aria-label="Primary Navigation">
+      <div class="nav__fluid--container">
+        <div  class="nav__base">
+          <div class="nav__logo">
+            <a
+              href=""
+              class="nav__logo-link"
+            >
+              <img class="nav__logo-img" loading="lazy" src="https://rackspace.com/themes/custom/hansel/images/rs-logo-2021B.svg" alt="Rackspace Technology Logo">
+            </a>
+          </div>
+          <div class="nav__links">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="" class="nav__list-link">Solutions</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-link">Platforms</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-link">Industries</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__contact-box">
+            <a href="contact" class="nav__contact-link">
+              Contact Us
+            </a>
+            <a href="#" class="nav__mobile-btn" aria-label="Open" onclick="toggleMobileMenu()"></a>
+          </div>
+      </div>
+      <div class="nav__mega-mbl" id="mobile-menu">
+        <ul class="nav__mega-mbl--list">
+          <li class="nav__mega-mbl--item">
+            <a href="#" class="nav__mega-mbl--link">Solutions</a>
+          </li>
+          <li class="nav__mega-mbl--item">
+            <a href="#" class="nav__mega-mbl--link">Platforms</a>
+          </li>
+          <li class="nav__mega-mbl--item">
+            <a href="#" class="nav__mega-mbl--link">Industries</a>
+          </li>
+          <li class="nav__mega-mbl--item">
+            <a href="#" class="nav__mega-mbl--link">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="hero">
+        <div class="header-padding"></div>
+        <div class="hero-content body-width-container">
+          <div class="hero-description">
+            <h1>Rackspace Spot</h1>
+            <h2>
+              Cloud infrastructure auctioned in an open market.<br>
+              Delivered as turnkey, fully managed Kubernetes clusters.
+            </h2>
+          </div>
+          <div class="hero-box-container">
+            <div class="hero-box">
+              <h3>Bid from $0.001/hr</h3>
+              <div class="box-description"><a class="box-button" href="https://spot.rackspace.com/ui/signup">Get started with Rackspace Spot</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="how-it-works-section">
+        <div class="body-width-container">
+          <h3>How it works</h3>
+          <div class="how-it-works-frame">
+            <img class="how-it-works-img" src="how-it-works.png">
+          </div>
+        </div>
+      </div>
+      <div class="use-cases-section">
+        <div class="body-width-container">
+          <h3>Key Benefits</h3>
+          <div class="use-cases">
+            <h4>Open market lowers prices</h4>
+            <h4>Fully managed Kubernetes</h4>
+            <h4>Rich Add-Ons</h4>
+            <div>
+              <p>Bid for cloud servers from Rackspace's large inventory of spare cloud capacity.  Bids are fulfilled by an open market auction, within minutes.</p>
+              <p>The market price for servers is determined by the final cut-off price in the auction. Existing bids for capacity are not pre-empted unless the market price exceeds the highest price in the bid.</p>
+            </div>
+            <div>
+              <p>Leverage Kubernetes, without the complexity of managing all the moving parts.  The Kubernetes control plane is fully managed, so you don't have to worry about configuring high availability, upgrades, or troubleshooting.</p>
+              <p>In addition, Spot comes out of the box with two storage classes for persistent storage (ssd and sata), a network-policy capable CNI (using Calico), and load balancers.</p>
+            </div>
+            <div>
+              <p>
+                Bring your own favorite K8s helm charts of Operators today, while our engineers are hard at work to include these out-of-the-box, including:
+              <ul>
+                <li>DBaaS operators</li>
+                <li>Cluster backup</li>
+                <li>Enhanced monitoring</li>
+                <li>Security scanning</li>
+                <li>ML/Ops tooling</li>
+              </ul>
+              </p>
+            </div>
+          </div>
+          <div class="use-cases-sm-screen">
+            <div class="use-case-sm">
+              <h4>Open market auction</h4>
+              <div>
+                <p>Bid for spare server capacity from Rackspace's large inventory of spare cloud capacity.  Bids are fulfilled by an open market auction, and fulfilled within minutes.</p>
+                <p>The market price for servers is determined by the final cut-off price for capacity (the lowest winning bid). Existing bids for capacity are not pre-empted unless the market price exceeds the highest price in the bid.</p>
+              </div>
+            </div>
+            <div class="use-case-sm">
+              <h4>Fully managed Kubernetes</h4>
+              <div>
+                <p>Leverage Kubernetes, without the complexity of managing all the moving parts.  The Kubernetes control plane is fully managed, so you don't have to worry about configuring high availability, upgrades, or troubleshooting.</p>
+                <p>In addition, Spot comes out of the box with two storage classes for persistent storage (ssd and sata), a network-policy capable CNI (using Calico), and load balancers.</p>
+              </div>
+            </div>
+            <div class="use-case-sm">
+              <h4>Rich Add-Ons</h4>
+              <div>
+                <p>
+                  Bring your own favorite K8s helm charts of Operators today, while our engineers are hard at work to include these out-of-the-box, including:
+                <ul>
+                  <li>Cluster backups</li>
+                  <li>DBaaS operators</li>
+                  <li>Enhanced monitoring</li>
+                  <li>Security scanning</li>
+                  <li>ML/Ops tooling</li>
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spot-savings-section">
+        <div class="body-width-container">
+          <h3>Spot The Savings</h3>
+          <div class="savings-comparison-container">
+            <div class="savings-comparison-mobile">
+              <div class="comparison-buttons-mobile">
+                <div class="comparison-button-mobile active" id="mobile-reference-a" onclick="togglePriceChart('a')">Scenario A: Tiny Deployment</div>
+                <div class="comparison-button-mobile" id="mobile-reference-b" onclick="togglePriceChart('b')">Scenario B - Small Deployment</div>
+                <div class="comparison-button-mobile" id="mobile-reference-c" onclick="togglePriceChart('c')">Scenario C - Growth Deployment</div>
+              </div>
+              <div class="comparison-template-mobile">
+                <div class="template-content" id="mobile-template-a">
+                  <div>1 cluster - 4 x m3.medium nodes</div>
+                  <div>Non-production control plane</div>
+                  <div>1 load balancer</div>                  
+                </div>
+                <div class="template-content" id="mobile-template-b" style="display: none">
+                  <div>2 clusters - 4 x m3.large nodes</div>
+                  <div>Production control planes</div>
+                  <div>2 persistent volumes at 5GB</div>
+                  <div>2 load balancers</div>
+                </div>
+                <div class="template-content" id="mobile-template-c" style="display: none">
+                  <div>4 clusters - 16 x m3.2xlarge nodes</div>
+                  <div>Production control planes</div>
+                  <div>12 persistent volumes at 20GB</div>
+                  <div>4 load balancers</div>
+                </div>
+                <div class="fine-print">* Estimated costs, not accounting for network egress and other variable costs.</div>
+              </div>
+              <div class="comparison-table-mobile">
+                <div class="comparison-header">
+                  <img class="comparison-logo" src="rackspace-logo.png" alt="Rackspace Logo"/>
+                  <div>Spot</div>
+                </div>
+                <div class="comparison-cell">
+                  <div id="mobile-spot-a">
+                    <div class="total-price">From $12.88 /mo</div>
+                    <div class="price-breakdown">
+                      <div>4 x $0.72 /mo</div>
+                      <div>+ $0</div>
+                      <div>+ $10</div>
+                    </div>
+                  </div>
+                  <div id="mobile-spot-b" style="display: none">
+                    <div class="total-price">From $106.36 /mo</div>
+                    <div class="price-breakdown">
+                      <div>8 x $0.72 /mo</div>
+                      <div>+ 2 x $40</div>
+                      <div>+ 2 x 5 x $0.06</div>
+                      <div>+ 2 x $10</div>
+                    </div>
+                  </div>
+                  <div id="mobile-spot-c" style="display: none">
+                    <div class="total-price">From $259.04 /mo</div>
+                    <div class="price-breakdown">
+                      <div>64 x $0.72 /mo</div>
+                      <div>+ 4 x $40</div>
+                      <div>+ 12 x 20 x $0.06</div>
+                      <div>+ 4 x $10</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comparison-header">
+                  <img class="comparison-logo" src="aws-logo.svg" alt="AWS Logo"/>
+                  <div>EKS + Spot</div>
+                </div>
+                <div class="comparison-cell">
+                  <div id="mobile-aws-a">
+                    <div class="total-price">$159.42 /mo</div>
+                    <div class="price-breakdown">
+                      <div>4 x $17.86 /mo</div>
+                      <div>+ $72</div>
+                      <div>+ $16</div>
+                    </div>
+                  </div>
+                  <div id="mobile-aws-b" style="display: none">
+                    <div class="total-price">$468.86 /mo</div>
+                    <div class="price-breakdown">
+                      <div>8 x $36.50 /mo</div>
+                      <div>+ 2 x $72</div>
+                      <div>+ 2 x 5 x $0.08</div>
+                      <div>+ 2 x $16</div>
+                    </div>
+                  </div>
+                  <div id="mobile-aws-c" style="display: none">
+                    <div class="total-price" >$11,978.88 /mo</div>
+                    <div class="price-breakdown">
+                      <div>64 x $0.72 /mo</div>
+                      <div>+ 4 x $40</div>
+                      <div>+ 12 x 20 x $0.06</div>
+                      <div>+ 4 x $10</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comparison-header">
+                  <img class="comparison-logo" src="digitalocean-logo.png" alt="DigitalOcean Logo" />
+                  <div>K8s + Droplets</div>
+                </div>
+                <div class="comparison-cell">
+                  <div id="mobile-digitalocean-a">
+                    <div class="total-price">$108 /mo</div>
+                    <div class="price-breakdown">
+                      <li>4 x $24 /mo</li>
+                      <li>+ $0</li>
+                      <li>+ $12</li>
+                    </div>
+                  </div>
+                  <div id="mobile-digitalocean-b" style="display: none">
+                    <div class="total-price">$628 /mo</div>
+                    <div class="price-breakdown">
+                      <li>8 x $63 /mo</li>
+                      <li>+ 2 x $40</li>
+                      <li>+ 2 x $10</li>
+                      <li>+ 2 x $12</li>
+                    </div>
+                  </div>
+                  <div id="mobile-digitalocean-c" style="display: none">
+                    <div class="total-price">$16,456 /mo</div>
+                    <div class="price-breakdown">
+                      <li>64 x $252 /mo</li>
+                      <li>+ 4 x $40</li>
+                      <li>+ 12 x $10</li>
+                      <li>+ 4 x $12</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="savings-comparison">
+              <div class="comparison-buttons">
+                <div class="comparison-button active" id="reference-a" onclick="togglePriceChart('a')">Scenario A: Tiny Deployment</div>
+                <div class="comparison-button" id="reference-b" onclick="togglePriceChart('b')">Scenario B: Small Deployment</div>
+                <div class="comparison-button" id="reference-c" onclick="togglePriceChart('c')">Scenario C: Growth Deployment</div>
+              </div>
+              <div class="comparison-template">
+                <div class="template-content" id="template-a">
+                  <div>1 cluster - 4 x m3.medium nodes</div>
+                  <div>Non-production control plane</div>
+                  <div>1 load balancer</div>
+                </div>
+                <div class="template-content" id="template-b" style="display: none">
+                  <div>2 clusters - 4 x m3.large nodes</div>
+                  <div>Production control planes</div>
+                  <div>2 persistent volumes at 5GB</div>
+                  <div>2 load balancers</div>
+                </div>
+                <div class="template-content" id="template-c" style="display: none">
+                  <div>4 clusters - 16 x m3.2xlarge nodes</div>
+                  <div>Production control planes</div>
+                  <div>12 persistent volumes at 20GB</div>
+                  <div>4 load balancers</div>
+                </div>
+                <div class="fine-print">* Estimated costs, not accounting for network egress and other variable costs.</div>
+              </div>
+              <div class="comparison-table">
+                <div class="comparison-header">
+                  <img class="comparison-logo" src="rackspace-logo.png" alt="Rackspace Logo"/>
+                  <div>Spot</div>
+                </div>
+                <div class="comparison-header">
+                  <img class="comparison-logo" src="aws-logo.svg" alt="AWS Logo"/>
+                  <div>EKS + Spot</div>
+                </div>
+                <div class="comparison-header">
+                  <img class="comparison-logo" src="digitalocean-logo.png" alt="DigitalOcean Logo" />
+                  <div>K8s + Droplets</div>
+                </div>
+                <div class="comparison-cell">
+                  <div id="spot-a">
+                    <div class="total-price">From $12.88 /mo</div>
+                    <div class="price-breakdown">
+                      <div>4 x $0.72 /mo</div>
+                      <div>+ $0</div>
+                      <div>+ $10</div>
+                    </div>
+                  </div>
+                  <div id="spot-b" style="display: none">
+                    <div class="total-price">From $106.36 /mo</div>
+                    <div class="price-breakdown">
+                      <div>8 x $0.72 /mo</div>
+                      <div>+ 2 x $40</div>
+                      <div>+ 2 x 5 x $0.06</div>
+                      <div>+ 2 x $10</div>
+                    </div>
+                  </div>
+                  <div id="spot-c" style="display: none">
+                    <div class="total-price">From $259.04 /mo</div>
+                    <div class="price-breakdown">
+                      <div>64 x $0.72 /mo</div>
+                      <div>+ 4 x $40</div>
+                      <div>+ 12 x 20 x $0.06</div>
+                      <div>+ 4 x $10</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comparison-cell">
+                  <div id="aws-a">
+                    <div class="total-price">$159.42 /mo</div>
+                    <div class="price-breakdown">
+                      <div>4 x $17.86 /mo</div>
+                      <div>+ $72</div>
+                      <div>+ $16</div>
+                    </div>
+                  </div>
+                  <div id="aws-b" style="display: none">
+                    <div class="total-price">$468.86 /mo</div>
+                    <div class="price-breakdown">
+                      <div>8 x $36.50 /mo</div>
+                      <div>+ 2 x $72</div>
+                      <div>+ 2 x 5 x $0.08</div>
+                      <div>+ 2 x $16</div>
+                    </div>
+                  </div>
+                  <div id="aws-c" style="display: none">
+                    <div class="total-price" >$11,978.88 /mo</div>
+                    <div class="price-breakdown">
+                      <div>64 x $0.72 /mo</div>
+                      <div>+ 4 x $40</div>
+                      <div>+ 12 x 20 x $0.06</div>
+                      <div>+ 4 x $10</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comparison-cell">
+                  <div id="digitalocean-a">
+                    <div class="total-price">$108 /mo</div>
+                    <div class="price-breakdown">
+                      <div>4 x $24 /mo</div>
+                      <div>+ $0</div>
+                      <div>+ $12</div>
+                    </div>
+                  </div>
+                  <div id="digitalocean-b" style="display: none">
+                    <div class="total-price">$628 /mo</div>
+                    <div class="price-breakdown">
+                      <div>8 x $63 /mo</div>
+                      <div>+ 2 x $40</div>
+                      <div>+ 2 x $10</div>
+                      <div>+ 2 x $12</div>
+                    </div>
+                  </div>
+                  <div id="digitalocean-c" style="display: none">
+                    <div class="total-price">$16,456 /mo</div>
+                    <div class="price-breakdown">
+                      <div>64 x $252 /mo</div>
+                      <div>+ 4 x $40</div>
+                      <div>+ 12 x $10</div>
+                      <div>+ 4 x $12</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="get-started-section">
+        <div class="body-width-container">
+          <h3>Get started with Spot</h3>
+          <div class="get-started-boxes">
+            <div class="get-started-box">
+              <h4>Creating a Cloudspace</h4>
+              <div>Create a running cloudspace in minutes with just a few clicks. Learn all you need to know about creating a cloudspace here.</a></div>
+              <a href="TODO">Learn to create a cloudspace »</a>
+            </div>
+            <div class="get-started-box">
+              <h4>Deploying an App</h4>
+              <div>Need some help deploying an application? Learn how to deploy an application in your cloudspace with a detailed tutorial.</div>
+              <a href="TODO">Check out the tutorial »</a>
+            </div>
+            <div class="get-started-box">
+              <h4>Pricing</h4>
+              <div>Find out how prices stay low and how cloudspace usage is billed.</div>
+              <a href="TODO">Learn how pricing works »</a>
+            </div>
+          </div>
+          <div class="get-started-boxes">
+            <div class="get-started-box">
+              <h4>Open Market Auction</h4>
+              <div>Transparency is key to a fair auction. Learn all about how Spot's "open market auction" for server capacity works.</a></div>
+              <a href="TODO">See how auctions are run »</a>
+            </div>
+            <div class="get-started-box">
+              <h4>Understanding Pre-emption</h4>
+              <div>Spot nodes are pre-empted when the market price for the server type exceeds the maximum bid price. Understanding and managing spot node pre-emption is vital to keep your cloudspace running smoothly.</a></div>
+              <a href="TODO">Learn about server pre-emption »</a>
+            </div>
+            <div class="get-started-box">
+              <h4>Frequently Asked Questions</h4>
+              <div>Get answers to common questions in our FAQ, or feel free to contact us anytime with your own questions.</div>
+              <a href="TODO">Visit the FAQ page »</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer__section">
+      <div class="footer__container">
+        <div class="footer__links">
+          <a href="" class="footer__link">Link 1</a>
+          <a href="" class="footer__link">Link 2</a>
+          <a href="" class="footer__link">Link 3</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenu.style.display === "none") {
+          mobileMenu.style.display = "block";
+        } else if (mobileMenu.style.display === '') {
+          mobileMenu.style.display = "block";
+        } else {
+          mobileMenu.style.display = "none";
+        }
+      }
+
+      function resetActiveTabs() {
+        const tabA = document.getElementById("reference-a");
+        const tabB = document.getElementById("reference-b");
+        const tabC = document.getElementById("reference-c");
+        const mobileTabA = document.getElementById("mobile-reference-a");
+        const mobileTabB = document.getElementById("mobile-reference-b");
+        const mobileTabC = document.getElementById("mobile-reference-c");
+        tabA.classList.remove("active");
+        tabB.classList.remove("active");
+        tabC.classList.remove("active");
+        mobileTabA.classList.remove("active");
+        mobileTabB.classList.remove("active");
+        mobileTabC.classList.remove("active");
+      }
+
+      function setTabActive(type) {
+        const tab = document.getElementById(`reference-${type}`)
+        const mobileTab = document.getElementById(`mobile-reference-${type}`)
+        tab.classList.add("active");
+        mobileTab.classList.add("active");
+      }
+
+      function resetActiveCopy() {
+        const templateA = document.getElementById('template-a');
+        const templateB = document.getElementById('template-b');
+        const templateC = document.getElementById('template-c');
+        const spotA = document.getElementById('spot-a');
+        const spotB = document.getElementById('spot-b');
+        const spotC = document.getElementById('spot-c');
+        const awsA = document.getElementById('aws-a');
+        const awsB = document.getElementById('aws-b');
+        const awsC = document.getElementById('aws-c');
+        const digitaloceanA = document.getElementById('digitalocean-a');
+        const digitaloceanB = document.getElementById('digitalocean-b');
+        const digitaloceanC = document.getElementById('digitalocean-c');
+        const mobileTemplateA = document.getElementById('mobile-template-a');
+        const mobileTemplateB = document.getElementById('mobile-template-b');
+        const mobileTemplateC = document.getElementById('mobile-template-c');
+        const mobileSpotA = document.getElementById('mobile-spot-a');
+        const mobileSpotB = document.getElementById('mobile-spot-b');
+        const mobileSpotC = document.getElementById('mobile-spot-c');
+        const mobileAwsA = document.getElementById('mobile-aws-a');
+        const mobileAwsB = document.getElementById('mobile-aws-b');
+        const mobileAwsC = document.getElementById('mobile-aws-c');
+        const mobileDigitaloceanA = document.getElementById('mobile-digitalocean-a');
+        const mobileDigitaloceanB = document.getElementById('mobile-digitalocean-b');
+        const mobileDigitaloceanC = document.getElementById('mobile-digitalocean-c');
+        templateA.style.display = 'none';
+        templateB.style.display = 'none';
+        templateC.style.display = 'none';
+        spotA.style.display = 'none';
+        spotB.style.display = 'none';
+        spotC.style.display = 'none';
+        awsA.style.display = 'none';
+        awsB.style.display = 'none';
+        awsC.style.display = 'none';
+        digitaloceanA.style.display = 'none';
+        digitaloceanB.style.display = 'none';
+        digitaloceanC.style.display = 'none';
+        mobileTemplateA.style.display = 'none';
+        mobileTemplateB.style.display = 'none';
+        mobileTemplateC.style.display = 'none';
+        mobileSpotA.style.display = 'none';
+        mobileSpotB.style.display = 'none';
+        mobileSpotC.style.display = 'none';
+        mobileAwsA.style.display = 'none';
+        mobileAwsB.style.display = 'none';
+        mobileAwsC.style.display = 'none';
+        mobileDigitaloceanA.style.display = 'none';
+        mobileDigitaloceanB.style.display = 'none';
+        mobileDigitaloceanC.style.display = 'none';
+      }
+
+      function setActiveCopy(type) {
+        const template = document.getElementById(`template-${type}`)
+        const spot = document.getElementById(`spot-${type}`)
+        const aws = document.getElementById(`aws-${type}`)
+        const digitalocean = document.getElementById(`digitalocean-${type}`)
+        const mobileTemplate = document.getElementById(`mobile-template-${type}`)
+        const mobileSpot = document.getElementById(`mobile-spot-${type}`)
+        const mobileAws = document.getElementById(`mobile-aws-${type}`)
+        const mobileDigitalocean = document.getElementById(`mobile-digitalocean-${type}`)
+        template.style.display = 'block'
+        spot.style.display = 'block'
+        aws.style.display = 'block'
+        digitalocean.style.display = 'block'
+        mobileTemplate.style.display = 'block'
+        mobileSpot.style.display = 'block'
+        mobileAws.style.display = 'block'
+        mobileDigitalocean.style.display = 'block'
+      }
+
+      function togglePriceChart(type) {
+        resetActiveTabs()
+        setTabActive(type)
+        resetActiveCopy()
+        setActiveCopy(type)
+      }
+    </script>
+  </body>
+</html>
