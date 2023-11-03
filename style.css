@@ -170,6 +170,12 @@ h4 {
   gap: 30px;
 }
 
+.copyright {
+  color: white;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
 @media only screen and (max-width: 991px) {
   .nav__base {
     grid-template-columns: 240px 1fr 60px;
@@ -529,5 +535,9 @@ h4 {
 
   .savings-comparison-mobile {
     display: grid;
+  }
+
+  .copyright {
+    text-align: center;
   }
 }
