@@ -46,7 +46,7 @@ h4 {
   max-width: 1920px;
   width: 90%;
   display: grid;
-  grid-template-columns: 240px 1fr 130px;
+  grid-template-columns: 240px 1fr max-content 130px;
   grid-template-rows: auto;
   max-width: 90%;
   width: 1920px;
@@ -90,7 +90,25 @@ h4 {
   font-size: 16px;
   font-weight: 700;
   justify-content: center;
-  padding: 15px;
+  margin: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
+  letter-spacing: 1px;
+}
+
+.nav__login-container {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.nav__login {
+  align-items: center;
+  color: #333;
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
+  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   transition: border-color 0.2s;
@@ -178,7 +196,7 @@ h4 {
 
 @media only screen and (max-width: 991px) {
   .nav__base {
-    grid-template-columns: 240px 1fr 60px;
+    grid-template-columns: 240px 1fr max-content 60px;
   }
 
   .nav__contact-link {
