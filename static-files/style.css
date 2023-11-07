@@ -463,6 +463,13 @@ h4 {
   text-align: center;
 }
 
+.spot-note {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.1em;
+  margin-top: 12px;
+}
+
 .use-cases-section {
   background: #efefef;
   padding: 40px 0px;
