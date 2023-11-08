@@ -8,6 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      !function(){"use strict";!function(e,t){var n=e.amplitude||{_q:[],_iq:{}};if(n.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var r=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,n){return function(r){e._q.push({name:t,args:Array.prototype.slice.call(n,0),resolve:r})}},o=function(e,t,n){e[t]=function(){if(n)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var n=0;n<g.length;n++)o(e,g[n],!0)};n.invoked=!0;var u=t.createElement("script");u.type="text/javascript",u.integrity="sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);for(var c=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<p.length;l++)r(c,p[l]);n.Identify=c;for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);n.Revenue=d;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
+
+      amplitude.init('f66e70228b82784468071383920321dc', undefined, {
+        defaultTracking: {
+          pageViews: true,
+          sessions: true
+        }
+      });
+    </script>
   </head>
   <body>
     <nav id="mega-nav"  class="nav" role="navigation" aria-label="Primary Navigation">
@@ -35,10 +45,10 @@
             </ul>
           </div>
           <div class="nav__login-container">
-            <a href="ui" class="nav__login">Login</a>
+            <a href="#" class="nav__login" onclick="routeToUi('login')">Login</a>
           </div>
           <div class="nav__contact-box">
-            <a href="ui" class="nav__contact-link">
+            <a href="#" class="nav__contact-link" onclick="routeToUi('sign-up')">
               Sign Up
             </a>
             <a href="#" class="nav__mobile-btn" aria-label="Open" onclick="toggleMobileMenu()"></a>
@@ -56,7 +66,7 @@
             <a href="https://www.rackspace.com/industry" class="nav__mega-mbl--link">Industries</a>
           </li>
           <li class="nav__mega-mbl--item">
-            <a href="ui" class="nav__mega-mbl--link">Sign Up</a>
+            <a href="#" class="nav__mega-mbl--link" onclick="routeToUi('sign-up')">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -75,7 +85,7 @@
           <div class="hero-box-container">
             <div class="hero-box">
               <h3>Bid from $0.001/hr</h3>
-              <div class="box-description"><a class="box-button" href="ui">Get started with Rackspace Spot</a></div>
+              <div class="box-description"><a class="box-button" href="" onclick="routeToUi('get-started')">Get started with Rackspace Spot</a></div>
             </div>
           </div>
         </div>
@@ -567,10 +577,22 @@
       }
 
       function togglePriceChart(type) {
+        amplitude.track('Price Comparison - Clicked scenario ' + type)
         resetActiveTabs()
         setTabActive(type)
         resetActiveCopy()
         setActiveCopy(type)
+      }
+
+      function routeToUi(source) {
+        amplitude.track('Route to UI - ' + source)
+        setTimeout(() => {
+          window.location.href = "ui"
+        }, 500)
+      }
+
+      function trackEvent(name) {
+        amplitude.track(name)
       }
     </script>
   </body>
