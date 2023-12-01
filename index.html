@@ -598,8 +598,9 @@
 
       function routeToUi(source) {
         amplitude.track('Route to UI - ' + source)
+        const deviceId = amplitude.getDeviceId()
         setTimeout(() => {
-          window.location.href = "ui"
+          window.location.href = `ui?deviceId=${deviceId}`
         }, 1000)
       }
 
