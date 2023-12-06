@@ -92,7 +92,7 @@
       </div>
       <div class="how-it-works-section">
         <div class="body-width-container">
-          <h3>How it works</h3>
+          <h3 class="section-header">How it works</h3>
           <div class="how-it-works-frame">
             <img class="how-it-works-img" src="static-files/how-it-works.png">
           </div>
@@ -100,7 +100,7 @@
       </div>
       <div class="use-cases-section">
         <div class="body-width-container">
-          <h3>Key Benefits</h3>
+          <h3 class="section-header">Key Benefits</h3>
           <div class="use-cases">
             <h4>Open market lowers prices</h4>
             <h4>Fully managed Kubernetes</h4>
@@ -161,142 +161,8 @@
       </div>
       <div class="spot-savings-section">
         <div class="body-width-container">
-          <h3>Spot The Savings</h3>
+          <h3 class="section-header">Spot The Savings</h3>
           <div class="savings-comparison-container">
-            <div class="savings-comparison-mobile">
-              <div class="comparison-buttons-mobile">
-                <div class="comparison-button-mobile active" id="mobile-reference-a" onclick="togglePriceChart('a')">Scenario A: Tiny Deployment</div>
-                <div class="comparison-button-mobile" id="mobile-reference-b" onclick="togglePriceChart('b')">Scenario B - Small Deployment</div>
-                <div class="comparison-button-mobile" id="mobile-reference-c" onclick="togglePriceChart('c')">Scenario C - Growth Deployment</div>
-              </div>
-              <div class="comparison-template-mobile">
-                <div class="template-content" id="mobile-template-a">
-                  <div>1 cluster - 4 x m3.medium nodes</div>
-                  <div>Non-production control plane</div>
-                  <div>1 load balancer</div>                  
-                </div>
-                <div class="template-content" id="mobile-template-b" style="display: none">
-                  <div>2 clusters - 4 x m3.large nodes</div>
-                  <div>Production control planes</div>
-                  <div>2 persistent volumes at 5GB</div>
-                  <div>2 load balancers</div>
-                </div>
-                <div class="template-content" id="mobile-template-c" style="display: none">
-                  <div>4 clusters - 16 x m3.2xlarge nodes</div>
-                  <div>Production control planes</div>
-                  <div>12 persistent volumes at 20GB</div>
-                  <div>4 load balancers</div>
-                </div>
-                <div class="fine-print">* Estimated costs, not accounting for network egress and other variable costs.</div>
-              </div>
-              <div class="comparison-table-mobile">
-                <div class="comparison-header">
-                  <img class="comparison-logo" src="static-files/rackspace-logo.png" alt="Rackspace Logo"/>
-                  <div>Spot</div>
-                </div>
-                <div class="comparison-cell">
-                  <div id="mobile-spot-a">
-                    <div class="total-price">From $12.88 /mo*</div>
-                    <div class="price-breakdown">
-                      <div>4x nodes @ $0.72 /mo</div>
-                      <div>1x non-production control plane @ $0 /mo</div>
-                      <div>1x load balancer @ $10 /mo</div>
-                    </div>
-                    <div class="spot-note">* Based on current market prices. Market prices will vary over time with demand and supply.</div>
-                  </div>
-                  <div id="mobile-spot-b" style="display: none">
-                    <div class="total-price">From $106.36 /mo*</div>
-                    <div class="price-breakdown">
-                      <div>8x nodes @ $0.72 /mo</div>
-                      <div>2x production control planes @ $40 /mo</div>
-                      <div>2x persistent volumes @ 5GB x $0.06 GB /mo</div>
-                      <div>2x load balancers @ $10 /mo</div>
-                    </div>
-                    <div class="spot-note">* Based on current market prices. Market prices will vary over time with demand and supply.</div>
-                  </div>
-                  <div id="mobile-spot-c" style="display: none">
-                    <div class="total-price">From $259.04 /mo*</div>
-                    <div class="price-breakdown">
-                      <div>64x nodes @ $0.72 /mo</div>
-                      <div>4x production control planes @ $40 /mo</div>
-                      <div>12x persistent volumes @ 20GB x $0.06GB /mo</div>
-                      <div>4x load balancers @ $10 /mo</div>
-                    </div>
-                    <div class="spot-note">* Based on current market prices. Market prices will vary over time with demand and supply.</div>
-                  </div>
-                </div>
-                <div class="comparison-header">
-                  <img class="comparison-logo" src="static-files/aws-logo.svg" alt="AWS Logo"/>
-                  <div>EKS + Spot</div>
-                </div>
-                <div class="comparison-cell">
-                  <div id="mobile-aws-a">
-                    <div class="total-price">$159.42 /mo</div>
-                    <div class="price-breakdown">
-                      <div>4x nodes @ $17.86 /mo</div>
-                      <div>1x production control plane @ $72 /mo</div>
-                      <div>1x load balancer @ $16 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                  <div id="mobile-aws-b" style="display: none">
-                    <div class="total-price">$468.86 /mo</div>
-                    <div class="price-breakdown">
-                      <div>8x nodes @ $36.50 /mo</div>
-                      <div>2x production control planes @ $72 /mo</div>
-                      <div>2x persistent volumes @ 5GB x $0.08GB /mo</div>
-                      <div>2x load balancers @ $16 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                  <div id="mobile-aws-c" style="display: none">
-                    <div class="total-price" >$11,978.88 /mo</div>
-                    <div class="price-breakdown">
-                      <div>64x nodes @ $181.37 /mo</div>
-                      <div>4x production control planes @ $72 /mo</div>
-                      <div>12x persistent volumes @ 20GB x $0.08GB /mo</div>
-                      <div>4x load balancers @ $16 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                </div>
-                <div class="comparison-header">
-                  <img class="comparison-logo" src="static-files/digitalocean-logo.png" alt="DigitalOcean Logo" />
-                  <div>K8s + Droplets</div>
-                </div>
-                <div class="comparison-cell">
-                  <div id="mobile-digitalocean-a">
-                    <div class="total-price">$108 /mo</div>
-                    <div class="price-breakdown">
-                      <div>4x nodes @ $24 /mo</div>
-                      <div>1x non-production control plane @ $0 /mo</div>
-                      <div>1x load balancer @ $12 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                  <div id="mobile-digitalocean-b" style="display: none">
-                    <div class="total-price">$628 /mo</div>
-                    <div class="price-breakdown">
-                      <div>8x nodes @ $63 /mo</div>
-                      <div>2x production control planes @ $40 /mo</div>
-                      <div>2x 5GB persistent volumes @ $10 /mo</div>
-                      <div>2x load balancers @ $12 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                  <div id="mobile-digitalocean-c" style="display: none">
-                    <div class="total-price">$16,456 /mo</div>
-                    <div class="price-breakdown">
-                      <div>64x nodes @ $252 /mo</div>
-                      <div>4x production control planes @ $40 /mo</div>
-                      <div>12x 20GB persistent volumes @ $10 /mo</div>
-                      <div>4x load balancers @ $12 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="savings-comparison">
               <div class="comparison-buttons">
                 <div class="comparison-button active" id="reference-a" onclick="togglePriceChart('a')">Scenario A: Tiny Deployment</div>
@@ -323,110 +189,207 @@
                 </div>
                 <div class="fine-print">* Estimated costs, not accounting for network egress and other variable costs.</div>
               </div>
-              <div class="comparison-table">
-                <div class="comparison-header">
-                  <img class="comparison-logo" src="static-files/rackspace-logo.png" alt="Rackspace Logo"/>
-                  <div>Spot</div>
-                </div>
-                <div class="comparison-header">
-                  <img class="comparison-logo" src="static-files/aws-logo.svg" alt="AWS Logo"/>
-                  <div>EKS + Spot</div>
-                </div>
-                <div class="comparison-header">
-                  <img class="comparison-logo" src="static-files/digitalocean-logo.png" alt="DigitalOcean Logo" />
-                  <div>K8s + Droplets</div>
-                </div>
-                <div class="comparison-cell">
-                  <div id="spot-a">
-                    <div class="total-price">From $12.88 /mo*</div>
-                    <div class="price-breakdown">
-                      <div>4x nodes @ $0.72 /mo</div>
-                      <div>1x non-production control plane @ $0 /mo</div>
-                      <div>1x load balancer @ $10 /mo</div>
+              <div class="comparison-cards">
+                <div class="comparison-card spot">
+                  <div class="comparison-top-section">
+                    <div class="comparison-header">
+                      <img class="comparison-logo" src="static-files/rackspace-logo.png" alt="Rackspace Logo"/>
+                      <div>Spot</div>
                     </div>
-                    <div class="spot-note">* Based on current market prices. Market prices will vary over time with demand and supply.</div>
+                    <div class="comparison-total-price">
+                      <div>From</div>
+                      <div id="spot-a-price" class="price">$12.88</div>
+                      <div id="spot-b-price" class="price" style="display: none">$106.36</div>
+                      <div id="spot-c-price" class="price" style="display: none">$259.04</div>
+                      <div>per month*</div>
+                    </div>
                   </div>
-                  <div id="spot-b" style="display: none">
-                    <div class="total-price">From $106.36 /mo*</div>
-                    <div class="price-breakdown">
-                      <div>8x nodes @ $0.72 /mo</div>
-                      <div>2x production control planes @ $40 /mo</div>
-                      <div>2x persistent volumes @ 5GB x $0.06 GB /mo</div>
-                      <div>2x load balancers @ $10 /mo</div>
+                  <div class="comparison-bottom-section">
+                    <div id="spot-a-comparisons" class="comparison-items">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x nodes @ $0.72 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>1x non-production control plane @ $0 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>1x load balancer @ $10 /mo</div>
+                      </div>
                     </div>
-                    <div class="spot-note">* Based on current market prices. Market prices will vary over time with demand and supply.</div>
-                  </div>
-                  <div id="spot-c" style="display: none">
-                    <div class="total-price">From $259.04 /mo*</div>
-                    <div class="price-breakdown">
-                      <div>64x nodes @ $0.72 /mo</div>
-                      <div>4x production control planes @ $40 /mo</div>
-                      <div>12x persistent volumes @ 20GB x $0.06GB /mo</div>
-                      <div>4x load balancers @ $10 /mo</div>
+                    <div id="spot-b-comparisons" class="comparison-items" style="display: none">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>8x nodes @ $0.72 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x production control planes @ $40 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x persistent volumes @ 5GB x $0.06 GB /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x load balancers @ $10 /mo</div>
+                      </div>
                     </div>
-                    <div class="spot-note">* Based on current market prices. Market prices will vary over time with demand and supply.</div>
-                  </div>
-                </div>
-                <div class="comparison-cell">
-                  <div id="aws-a">
-                    <div class="total-price">$159.42 /mo</div>
-                    <div class="price-breakdown">
-                      <div>4x nodes @ $17.86 /mo</div>
-                      <div>1x production control plane @ $72 /mo</div>
-                      <div>1x load balancer @ $16 /mo</div>
+                    <div id="spot-c-comparisons" class="comparison-items" style="display: none">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>64x nodes @ $0.72 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x production control planes @ $40 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>12x persistent volumes @ 20GB x $0.06GB /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x load balancers @ $10 /mo</div>
+                      </div>
                     </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                  <div id="aws-b" style="display: none">
-                    <div class="total-price">$468.86 /mo</div>
-                    <div class="price-breakdown">
-                      <div>8x nodes @ $36.50 /mo</div>
-                      <div>2x production control planes @ $72 /mo</div>
-                      <div>2x persistent volumes @ 5GB x $0.08GB /mo</div>
-                      <div>2x load balancers @ $16 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
-                  </div>
-                  <div id="aws-c" style="display: none">
-                    <div class="total-price" >$11,978.88 /mo</div>
-                    <div class="price-breakdown">
-                      <div>64x nodes @ $181.37 /mo</div>
-                      <div>4x production control planes @ $72 /mo</div>
-                      <div>12x persistent volumes @ 20GB x $0.08GB /mo</div>
-                      <div>4x load balancers @ $16 /mo</div>
-                    </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
+                    <div class="comparison-note">* Based on current market prices. Market prices will vary over time with demand and supply.</div>
                   </div>
                 </div>
-                <div class="comparison-cell">
-                  <div id="digitalocean-a">
-                    <div class="total-price">$108 /mo</div>
-                    <div class="price-breakdown">
-                      <div>4x nodes @ $24 /mo</div>
-                      <div>1x non-production control plane @ $0 /mo</div>
-                      <div>1x load balancer @ $12 /mo</div>
+                <div class="comparison-card">
+                  <div class="comparison-top-section">
+                    <div class="comparison-header">
+                      <img class="comparison-logo" src="static-files/aws-logo.svg" alt="AWS Logo"/>
+                      <div>EKS + Spot</div>
                     </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
+                    <div class="comparison-total-price">
+                      <div id="aws-a-price" class="price">$159.42</div>
+                      <div id="aws-b-price" class="price" style="display: none">$468.86</div>
+                      <div id="aws-c-price" class="price" style="display: none">$11,978.88</div>
+                      <div>per month*</div>
+                    </div>
                   </div>
-                  <div id="digitalocean-b" style="display: none">
-                    <div class="total-price">$628 /mo</div>
-                    <div class="price-breakdown">
-                      <div>8x nodes @ $63 /mo</div>
-                      <div>2x production control planes @ $40 /mo</div>
-                      <div>2x 5GB persistent volumes @ $10 /mo</div>
-                      <div>2x load balancers @ $12 /mo</div>
+                  <div class="comparison-bottom-section">
+                    <div id="aws-a-comparisons" class="comparison-items">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x nodes @ $17.86 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>1x production control plane @ $72 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>1x load balancer @ $16 /mo</div>
+                      </div>
                     </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
+                    <div id="aws-b-comparisons" class="comparison-items" style="display: none">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>8x nodes @ $36.50 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x production control planes @ $72 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x persistent volumes @ 5GB x $0.08GB /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x load balancers @ $16 /mo</div>
+                      </div>
+                    </div>
+                    <div id="aws-c-comparisons" class="comparison-items" style="display: none">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>64x nodes @ $0.72 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x production control planes @ $40 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>12x persistent volumes @ 20GB x $0.06GB /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x load balancers @ $10 /mo</div>
+                      </div>
+                    </div>
+                    <div class="comparison-note">* Pricing comparison on 11/29/2023.</div>
                   </div>
-                  <div id="digitalocean-c" style="display: none">
-                    <div class="total-price">$16,456 /mo</div>
-                    <div class="price-breakdown">
-                      <div>64x nodes @ $252 /mo</div>
-                      <div>4x production control planes @ $40 /mo</div>
-                      <div>12x 20GB persistent volumes @ $10 /mo</div>
-                      <div>4x load balancers @ $12 /mo</div>
+                </div>
+                <div class="comparison-card">
+                  <div class="comparison-top-section">
+                    <div class="comparison-header">
+                      <img class="comparison-logo" src="static-files/digitalocean-logo.png" alt="DigitalOcean Logo" />
+                      <div>K8s + Droplets</div>
                     </div>
-                    <div class="spot-note">* Pricing comparison on 11/29/2023.</div>
+                    <div class="comparison-total-price">
+                      <div id="digitalocean-a-price" class="price">$108</div>
+                      <div id="digitalocean-b-price" class="price" style="display: none">$628</div>
+                      <div id="digitalocean-c-price" class="price" style="display: none">$16,456</div>
+                      <div>per month*</div>
+                    </div>
+                  </div>
+                  <div class="comparison-bottom-section">
+                    <div id="digitalocean-a-comparisons" class="comparison-items">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x nodes @ $24 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>1x non-production control plane @ $0 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>1x load balancer @ $12 /mo</div>
+                      </div>
+                    </div>
+                    <div id="digitalocean-b-comparisons" class="comparison-items" style="display: none">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>8x nodes @ $63 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x production control planes @ $40 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x 5GB persistent volumes @ $10 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>2x load balancers @ $12 /mo</div>
+                      </div>
+                    </div>
+                    <div id="digitalocean-c-comparisons" class="comparison-items" style="display: none">
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>64x nodes @ $252 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x production control planes @ $40 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>12x 20GB persistent volumes @ $10 /mo</div>
+                      </div>
+                      <div class="comparison-item">
+                        <div class="check-circle">&#10003</div>
+                        <div>4x load balancers @ $12 /mo</div>
+                      </div>
+                    </div>
+                    <div class="comparison-note">* Pricing comparison on 11/29/2023.</div>
                   </div>
                 </div>
               </div>
@@ -436,7 +399,7 @@
       </div>
       <div class="get-started-section">
         <div class="body-width-container">
-          <h3>Get started with Spot</h3>
+          <h3 class="section-header">Get started with Spot</h3>
           <div class="get-started-boxes">
             <div class="get-started-box">
               <h4>Creating a Cloudspace</h4>
@@ -500,92 +463,76 @@
         const tabA = document.getElementById("reference-a");
         const tabB = document.getElementById("reference-b");
         const tabC = document.getElementById("reference-c");
-        const mobileTabA = document.getElementById("mobile-reference-a");
-        const mobileTabB = document.getElementById("mobile-reference-b");
-        const mobileTabC = document.getElementById("mobile-reference-c");
         tabA.classList.remove("active");
         tabB.classList.remove("active");
         tabC.classList.remove("active");
-        mobileTabA.classList.remove("active");
-        mobileTabB.classList.remove("active");
-        mobileTabC.classList.remove("active");
       }
 
       function setTabActive(type) {
         const tab = document.getElementById(`reference-${type}`)
-        const mobileTab = document.getElementById(`mobile-reference-${type}`)
         tab.classList.add("active");
-        mobileTab.classList.add("active");
       }
 
       function resetActiveCopy() {
         const templateA = document.getElementById('template-a');
         const templateB = document.getElementById('template-b');
         const templateC = document.getElementById('template-c');
-        const spotA = document.getElementById('spot-a');
-        const spotB = document.getElementById('spot-b');
-        const spotC = document.getElementById('spot-c');
-        const awsA = document.getElementById('aws-a');
-        const awsB = document.getElementById('aws-b');
-        const awsC = document.getElementById('aws-c');
-        const digitaloceanA = document.getElementById('digitalocean-a');
-        const digitaloceanB = document.getElementById('digitalocean-b');
-        const digitaloceanC = document.getElementById('digitalocean-c');
-        const mobileTemplateA = document.getElementById('mobile-template-a');
-        const mobileTemplateB = document.getElementById('mobile-template-b');
-        const mobileTemplateC = document.getElementById('mobile-template-c');
-        const mobileSpotA = document.getElementById('mobile-spot-a');
-        const mobileSpotB = document.getElementById('mobile-spot-b');
-        const mobileSpotC = document.getElementById('mobile-spot-c');
-        const mobileAwsA = document.getElementById('mobile-aws-a');
-        const mobileAwsB = document.getElementById('mobile-aws-b');
-        const mobileAwsC = document.getElementById('mobile-aws-c');
-        const mobileDigitaloceanA = document.getElementById('mobile-digitalocean-a');
-        const mobileDigitaloceanB = document.getElementById('mobile-digitalocean-b');
-        const mobileDigitaloceanC = document.getElementById('mobile-digitalocean-c');
+        const spotAPrice = document.getElementById('spot-a-price');
+        const spotAComparisons = document.getElementById('spot-a-comparisons');
+        const spotBPrice = document.getElementById('spot-b-price');
+        const spotBComparisons = document.getElementById('spot-b-comparisons');
+        const spotCPrice = document.getElementById('spot-c-price');
+        const spotCComparisons = document.getElementById('spot-c-comparisons');
+        const awsAPrice = document.getElementById('aws-a-price');
+        const awsAComparisons = document.getElementById('aws-a-comparisons');
+        const awsBPrice = document.getElementById('aws-b-price');
+        const awsBComparisons = document.getElementById('aws-b-comparisons');
+        const awsCPrice = document.getElementById('aws-c-price');
+        const awsCComparisons = document.getElementById('aws-c-comparisons');
+        const digitaloceanAPrice = document.getElementById('digitalocean-a-price');
+        const digitaloceanAComparisons = document.getElementById('digitalocean-a-comparisons');
+        const digitaloceanBPrice = document.getElementById('digitalocean-b-price');
+        const digitaloceanBComparisons = document.getElementById('digitalocean-b-comparisons');
+        const digitaloceanCPrice = document.getElementById('digitalocean-c-price');
+        const digitaloceanCComparisons = document.getElementById('digitalocean-c-comparisons');
         templateA.style.display = 'none';
         templateB.style.display = 'none';
         templateC.style.display = 'none';
-        spotA.style.display = 'none';
-        spotB.style.display = 'none';
-        spotC.style.display = 'none';
-        awsA.style.display = 'none';
-        awsB.style.display = 'none';
-        awsC.style.display = 'none';
-        digitaloceanA.style.display = 'none';
-        digitaloceanB.style.display = 'none';
-        digitaloceanC.style.display = 'none';
-        mobileTemplateA.style.display = 'none';
-        mobileTemplateB.style.display = 'none';
-        mobileTemplateC.style.display = 'none';
-        mobileSpotA.style.display = 'none';
-        mobileSpotB.style.display = 'none';
-        mobileSpotC.style.display = 'none';
-        mobileAwsA.style.display = 'none';
-        mobileAwsB.style.display = 'none';
-        mobileAwsC.style.display = 'none';
-        mobileDigitaloceanA.style.display = 'none';
-        mobileDigitaloceanB.style.display = 'none';
-        mobileDigitaloceanC.style.display = 'none';
+        spotAPrice.style.display = 'none';
+        spotAComparisons.style.display = 'none';
+        spotBPrice.style.display = 'none';
+        spotBComparisons.style.display = 'none';
+        spotCPrice.style.display = 'none';
+        spotCComparisons.style.display = 'none';
+        awsAPrice.style.display = 'none';
+        awsAComparisons.style.display = 'none';
+        awsBPrice.style.display = 'none';
+        awsBComparisons.style.display = 'none';
+        awsCPrice.style.display = 'none';
+        awsCComparisons.style.display = 'none';
+        digitaloceanAPrice.style.display = 'none';
+        digitaloceanAComparisons.style.display = 'none';
+        digitaloceanBPrice.style.display = 'none';
+        digitaloceanBComparisons.style.display = 'none';
+        digitaloceanCPrice.style.display = 'none';
+        digitaloceanCComparisons.style.display = 'none';
       }
 
       function setActiveCopy(type) {
         const template = document.getElementById(`template-${type}`)
-        const spot = document.getElementById(`spot-${type}`)
-        const aws = document.getElementById(`aws-${type}`)
-        const digitalocean = document.getElementById(`digitalocean-${type}`)
-        const mobileTemplate = document.getElementById(`mobile-template-${type}`)
-        const mobileSpot = document.getElementById(`mobile-spot-${type}`)
-        const mobileAws = document.getElementById(`mobile-aws-${type}`)
-        const mobileDigitalocean = document.getElementById(`mobile-digitalocean-${type}`)
-        template.style.display = 'block'
-        spot.style.display = 'block'
-        aws.style.display = 'block'
-        digitalocean.style.display = 'block'
-        mobileTemplate.style.display = 'block'
-        mobileSpot.style.display = 'block'
-        mobileAws.style.display = 'block'
-        mobileDigitalocean.style.display = 'block'
+        const spotPrice = document.getElementById(`spot-${type}-price`)
+        const spotComparisons = document.getElementById(`spot-${type}-comparisons`)
+        const awsPrice = document.getElementById(`aws-${type}-price`)
+        const awsComparisons = document.getElementById(`aws-${type}-comparisons`)
+        const digitaloceanPrice = document.getElementById(`digitalocean-${type}-price`)
+        const digitaloceanComparisons = document.getElementById(`digitalocean-${type}-comparisons`)
+        template.style.display = 'flex'
+        spotPrice.style.display = 'block'
+        spotComparisons.style.display = 'grid'
+        awsPrice.style.display = 'block'
+        awsComparisons.style.display = 'grid'
+        digitaloceanPrice.style.display = 'block'
+        digitaloceanComparisons.style.display = 'grid'
       }
 
       function togglePriceChart(type) {

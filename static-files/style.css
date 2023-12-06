@@ -248,6 +248,10 @@ h4 {
   gap: 24px;
 }
 
+.section-header {
+  text-align: center;
+}
+
 .hero-content {
   display: flex;
   justify-content: space-between;
@@ -325,9 +329,7 @@ h4 {
 }
 
 .spot-savings-section {
-  background: linear-gradient(4.5deg, #005acb 0%, #0098d8 100%);
   padding: 40px 0px;
-  color: white;
 }
 
 .savings-comparison-container {
@@ -344,75 +346,133 @@ h4 {
   min-width: 80%;
 }
 
-.savings-comparison-mobile {
-  display: none;
-  /* gap: 16px; */
-}
-
 .comparison-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1px;
   background: white;
 }
 
 .comparison-button {
-  color: white;
-  background: #333;
+  text-align: center;
+  background: #fafafb;
   padding: 16px 24px;
   cursor: pointer;
   font-size: 18px;
+  border-radius: 4px;
+  position: relative;
 }
 
 .comparison-button:hover {
-  border-bottom: 2px solid #eb0000;
+  border: 1px solid #003482;
 }
 
 .comparison-button.active {
-  background: white;
-  color: #333;
-  border-bottom: 0px !important;
+  background: #003482;
+  color: white;
 }
 
-.comparison-buttons-mobile {
+.comparison-button.active::after {
+  content: '';
+  border-top: 10px solid #003482;
+  border-left: 10px solid transparent;
+  border-bottom: 0 dotted;
+  border-right: 10px solid transparent;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -10px;
+}
+
+.comparison-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1px;
-  background: white;
+  gap: 32px;
 }
 
-.comparison-button-mobile {
-  color: white;
-  background: #333;
-  padding: 16px 24px;
-  cursor: pointer;
+.comparison-card {
+  border: 2px solid #e6e7ea;
+  border-radius: 12px;
+  padding: 36px 24px;
 }
 
-.comparison-button-mobile.active {
-  background: white;
-  color: #333;
+.comparison-card.spot {
+  border: 2px solid #003482;
+  background: #f2f8fd;
 }
 
 .comparison-template {
   background: white;
   display: grid;
-  padding: 12px;
+  padding: 32px;
+}
+
+.comparison-top-section {
+  border-bottom: 1px solid #f3f3f4;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 282px;
+}
+
+.spot .comparison-top-section {
+  border-bottom: 1px solid #d8ebf9;
+}
+
+.comparison-total-price {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.comparison-total-price .price {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.comparison-bottom-section {
+  padding-top: 32px;
+}
+
+.comparison-items {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.comparison-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.check-circle {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  background: #e9f3ed;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 1.8;
+}
+
+.comparison-note {
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 28px;
 }
 
 .template-content {
-  text-align: center;
-}
-
-.comparison-template-mobile {
-  background: white;
-  display: grid;
-  padding: 12px;
-  color: #333;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  font-size: 14px;
 }
 
 .fine-print {
-  font-size: 12px;
-  padding: 12px 24px 0px;
+  font-size: 14px;
+  padding: 24px 24px 0px;
   text-align: center;
 }
 
@@ -424,20 +484,11 @@ h4 {
   gap: 1px;
 }
 
-.comparison-table-mobile {
-  color: #333;
-  display: grid;
-  border-top: 1px solid #ccc;
-  background: #ccc;
-  gap: 1px;
-}
-
 .comparison-header {
-  background: white;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
-  padding: 24px 36px;
+  padding: 0px 36px 36px;
 }
 
 .comparison-logo {
@@ -553,12 +604,27 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .savings-comparison {
+  .comparison-buttons {
+    grid-template-columns: none;
+    gap: 8px;
+  }
+
+  .comparison-button {
+    border: 1px solid #003482;
+  }
+
+  .comparison-button.active::after {
     display: none;
   }
 
-  .savings-comparison-mobile {
-    display: grid;
+  .template-content {
+    flex-flow: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .comparison-cards {
+    grid-template-columns: none;
   }
 
   .copyright {
