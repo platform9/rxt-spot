@@ -496,6 +496,15 @@ h4 {
   margin-bottom: 16px;
 }
 
+.comparison-logo-text {
+  font-size: 34px;
+}
+
+.vertical-center {
+  display: grid;
+  align-items: center;
+}
+
 .comparison-cell {
   background: white;
   padding: 24px;
