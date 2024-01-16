@@ -20,6 +20,7 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('set', 'linker', {'domains': ['spot.rackspace.com', 'cloudspaces.us.auth0.com']});
       gtag('js', new Date());
       gtag('config', 'G-EY7B3KH18K');
     </script>
@@ -188,7 +189,7 @@
           </div>
         </div>
       </div>
-      <div class="spot-savings-section">
+      <div class="spot-savings-section" id="spot-savings-section">
         <div class="body-width-container">
           <h3 class="section-header">Spot The Savings</h3>
           <div class="savings-comparison-container">
@@ -480,6 +481,30 @@
       </div>
     </footer>
     <script>
+      gtag('event', 'Viewed Home Page', {});
+
+      let lastKnownScrollPosition = 0;
+      let ticking = false;
+
+      function scrollEvent(event) {
+        lastKnownScrollPosition = window.scrollY;
+        const boundingRectOfPricing = document.getElementById('spot-savings-section').getBoundingClientRect()
+
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            ticking = false;
+            if (boundingRectOfPricing.y < 0) {
+              document.removeEventListener("scroll", scrollEvent)
+              gtag('event', 'Viewed Pricing Comparison', {});
+            }
+          });
+
+          ticking = true;
+        }
+      }
+
+      document.addEventListener("scroll", scrollEvent);
+
       function toggleMobileMenu() {
         const mobileMenu = document.getElementById("mobile-menu");
         if (mobileMenu.style.display === "none") {
@@ -568,6 +593,7 @@
       }
 
       function togglePriceChart(type) {
+        gtag('event', 'Price Comparison - Clicked scenario ' + type, {});
         amplitude.track('Price Comparison - Clicked scenario ' + type)
         resetActiveTabs()
         setTabActive(type)
@@ -576,6 +602,7 @@
       }
 
       function routeToUi(source) {
+        gtag('event', 'Route to UI - ' + source, {})
         amplitude.track('Route to UI - ' + source)
         const deviceId = amplitude.getDeviceId()
         setTimeout(() => {
