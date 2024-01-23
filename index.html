@@ -123,9 +123,49 @@
       <div class="how-it-works-section">
         <div class="body-width-container">
           <h3 class="section-header">How it works</h3>
-          <div class="how-it-works-frame">
-            <img class="how-it-works-img" src="static-files/how-it-works.png">
+          <div class="how-it-works-content">
+            <div class="how-it-works-visual">
+              <img src="static-files/example.gif" />
+            </div>
+            <div class="how-it-works-features">
+              <div class="how-it-works-feature">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                  <h5>Section 1</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">Text goes here</div>
+              </div>
+              <div class="how-it-works-feature">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                  <h5>Section 2</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="how-it-works-feature">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                  <h5>Section 3</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="how-it-works-feature" onclick="toggleFeature(this)">
+                <div class="feature-header">
+                  <h5>Section 4</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- <div class="how-it-works-frame">
+            <img class="how-it-works-img" src="static-files/how-it-works.png">
+          </div> -->
         </div>
       </div>
       <div class="use-cases-section">
@@ -612,6 +652,14 @@
 
       function trackEvent(name) {
         amplitude.track(name)
+      }
+
+      function toggleFeature(element) {
+        if (element.classList.contains('active')) {
+          element.classList.remove('active')
+        } else {
+          element.classList.add('active')
+        }
       }
     </script>
   </body>

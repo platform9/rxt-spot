@@ -28,6 +28,12 @@ h4 {
   line-height: 1.2;
 }
 
+h5 {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.2;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -326,6 +332,46 @@ h4 {
 
 .how-it-works-img {
   width: 100%;
+}
+
+.how-it-works-content {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 40px;
+}
+
+.how-it-works-visual > img {
+  width: 100%;
+}
+
+.how-it-works-features {
+  display: grid;
+  gap: 12px;
+  grid-template-rows: repeat(4, max-content);
+}
+
+.how-it-works-feature {
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.feature-header {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  cursor: pointer;
+}
+
+.feature-header > svg {
+  transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+}
+
+.feature-header.active > svg {
+  transform: rotate(180deg);
+}
+
+.feature-text {
+  padding: 0px 16px 16px 16px;
 }
 
 .spot-savings-section {
