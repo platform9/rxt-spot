@@ -605,6 +605,7 @@
         gtag('event', 'Route to UI - ' + source, {})
         amplitude.track('Route to UI - ' + source)
         const deviceId = amplitude.getDeviceId()
+        const method = ['sign-up', 'get-started'].includes(source) ? 'signup' : 'login'
         setTimeout(() => {
           window.location.href = `ui?deviceId=${deviceId}`
         }, 1000)
