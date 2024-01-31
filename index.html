@@ -44,6 +44,9 @@
         }
       });
     </script>
+    <link href="static-files/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="static-files/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="static-files/fontawesome/css/regular.min.css" rel="stylesheet">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -123,9 +126,185 @@
       <div class="how-it-works-section">
         <div class="body-width-container">
           <h3 class="section-header">How it works</h3>
-          <div class="how-it-works-frame">
-            <img class="how-it-works-img" src="static-files/how-it-works.png">
+          <div class="how-it-works-content-mobile">
+            <div>
+              <div class="how-it-works-section-label started">
+                <i class="fa-solid fa-timer" style="margin-right: 8px"></i>
+                Get Started in Minutes
+              </div>
+            </div>
+            <div class="how-it-works-features-mobile">
+              <div class="how-it-works-feature-mobile active">
+                <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                  <i class="fa-regular fa-cloud-check"></i>
+                  <h5>Choose your preferred cloud server type</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <div>
+                    Choose your preferred server class - whether General Purpose, Compute Heavy or Memory Heavy. Available in configurations from 1-16 vCPUs, and 1-120GB of RAM.
+                  </div>
+                  <div class="how-it-works-visual-mobile">
+                    <img src="static-files/spot-1-server-configs.gif" />
+                  </div>
+                </div>
+              </div>
+              <div class="how-it-works-feature-mobile">
+                <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                  <i class="fa-regular fa-money-check-dollar-pen"></i>
+                  <h5>Set your own price by making a bid</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <div>
+                    To make a bid, specify the highest price you are willing to pay for the selected configuration. Available servers are allocated in an open market auction, so you will have your servers for as long as the market price is below your maximum bid price.
+                  </div>
+                  <div class="how-it-works-visual-mobile">
+                    <img src="static-files/spot-2-bid-easily.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="how-it-works-feature-mobile">
+                <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                  <i class="fa-solid fa-terminal"></i>
+                  <h5>Consume via kubectl</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <div>
+                    Your allocated servers are delivered in a Cloudspace, which includes a fully managed Kubernetes control plane. We fully manage the K8s stack, including the control plane nodes, so you can focus on getting things done using K8s.
+                  </div>
+                  <div class="how-it-works-visual-mobile">
+                    <img src="static-files/spot-3-consume-via-kubectl-short.gif" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="how-it-works-section-label confidence" style="margin-top: 12px;">
+                <i class="fa-regular fa-shield-heart" style="margin-right: 8px"></i>
+                Operate with Confidence
+              </div>
+            </div>
+            <div class="how-it-works-features-mobile">
+              <div class="how-it-works-feature-mobile">
+                <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                  <i class="fa-solid fa-display-chart-up-circle-dollar"></i>
+                  <h5>Stay in control as prices and capacity change</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <div>
+                    Make informed bids using our “bid price insights” that show you capacity availability at different price thresholds. You can also set alerts to be informed as market conditions change. Finally, if the market price rises above your max bid price, you will be notified.
+                  </div>
+                  <div class="how-it-works-visual-mobile">
+                    <img src="static-files/spot-4-stay-informed.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="how-it-works-feature-mobile">
+                <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                  <i class="fa-solid fa-webhook"></i>
+                  <h5>Automate with Terraform</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <div>
+                    Automate the provisioning, pre-emption handling, and reconfiguration of your Cloudspaces using our Terraform provider. Deploy and operate Cloudspaces with 1 simple command.
+                  </div>
+                  <div class="how-it-works-visual-mobile">
+                    <img src="static-files/spot-5-operate-with-terraform.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="how-it-works-content">
+            <div class="how-it-works-features">
+              <div>
+                <div class="how-it-works-section-label started">
+                  <i class="fa-solid fa-timer" style="margin-right: 8px"></i>
+                  Get Started in Minutes
+                </div>
+              </div>
+              <div class="how-it-works-feature active">
+                <div class="feature-header" onclick="toggleFeature(this, 'serverClasses')">
+                  <i class="fa-regular fa-cloud-check"></i>
+                  <h5>Choose your preferred cloud server classes</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <div>
+                    Choose your preferred server class - whether General Purpose, Compute Heavy or Memory Heavy. Available in configurations from 1-16 vCPUs, and 1-120GB of RAM.
+                  </div>
+                </div>
+              </div>
+              <div class="how-it-works-feature">
+                <div class="feature-header" onclick="toggleFeature(this, 'makeBid')">
+                  <i class="fa-regular fa-money-check-dollar-pen"></i>
+                  <h5>Set your own price by making a bid</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">To make a bid, specify the highest price you are willing to pay for the selected configuration. Available servers are allocated in an open market auction, so you will have your servers for as long as the market price is below your maximum bid price.</div>
+              </div>
+              <div class="how-it-works-feature">
+                <div class="feature-header" onclick="toggleFeature(this, 'useKubectl')">
+                  <i class="fa-solid fa-terminal"></i>
+                  <h5>Consume via kubeconfig / kubectl</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">Your allocated servers are delivered in a Cloudspace, which includes a fully managed Kubernetes control plane. We fully manage the K8s stack, including the control plane nodes, so you can focus on getting things done using K8s.</div>
+              </div>
+              <div>
+                <div class="how-it-works-section-label confidence" style="margin-top: 12px;">
+                  <i class="fa-regular fa-shield-heart" style="margin-right: 8px"></i>
+                  Operate with Confidence
+                </div>
+              </div>
+              <div class="how-it-works-feature">
+                <div class="feature-header" onclick="toggleFeature(this, 'priceChange')">
+                  <i class="fa-regular fa-display-chart-up-circle-dollar"></i>
+                  <h5>Stay in control as prices and capacity change</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">Make informed bids using our “bid price insights” that show you capacity availability at different price thresholds. You can also set alerts to be informed as market conditions change. Finally, if the market price rises above your max bid price, you will be notified.</div>
+              </div>
+              <div class="how-it-works-feature">
+                <div class="feature-header" onclick="toggleFeature(this, 'automate')">
+                  <i class="fa-solid fa-webhook"></i>
+                  <h5>Automate with Terraform</h5>
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z" fill="black"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">Automate the provisioning, pre-emption handling, and reconfiguration of your Cloudspaces using our Terraform provider.  Deploy and operate Cloudspaces with 1 simple command.</div>
+              </div>
+            </div>
+            <div class="how-it-works-visual">
+              <img id="how-it-works-visual" src="static-files/spot-1-server-configs.gif" />
+            </div>
+          </div>
+          <!-- <div class="how-it-works-frame">
+            <img class="how-it-works-img" src="static-files/how-it-works.png">
+          </div> -->
         </div>
       </div>
       <div class="use-cases-section">
@@ -477,7 +656,7 @@
           <a href="https://www.rackspace.com/cloud#platforms" class="footer__link">Platforms</a>
           <a href="https://www.rackspace.com/industry" class="footer__link">Industries</a>
         </div>
-        <div class="copyright">© 2023 RACKSPACE TECHNOLOGY</div>
+        <div class="copyright">© 2024 RACKSPACE TECHNOLOGY</div>
       </div>
     </footer>
     <script>
@@ -607,12 +786,63 @@
         const deviceId = amplitude.getDeviceId()
         const method = ['sign-up', 'get-started'].includes(source) ? 'signup' : 'login'
         setTimeout(() => {
-          window.location.href = `ui?deviceId=${deviceId}`
+          window.location.href = `ui?deviceId=${deviceId}&method=${method}`
         }, 1000)
       }
 
       function trackEvent(name) {
         amplitude.track(name)
+      }
+
+      const imageUrlMap = {
+        serverClasses: 'static-files/spot-1-server-configs.gif',
+        makeBid: 'static-files/spot-2-bid-easily.png',
+        useKubectl: 'static-files/spot-3-consume-via-kubectl-short.gif',
+        priceChange: 'static-files/spot-4-stay-informed.png',
+        automate: 'static-files/spot-5-operate-with-terraform.png',
+      }
+
+      function toggleFeature(element, feature) {
+        const parentElement = element.parentElement
+        const collection = document.getElementsByClassName("how-it-works-feature")
+        for (let el of collection) {
+          if (el === parentElement) {
+            if (el.classList.contains('active')) {
+              el.classList.remove('active')
+            } else {
+              el.classList.add('active')
+            }            
+          } else {
+            if (el.classList.contains('active')) {
+              el.classList.remove('active')
+            }
+          }
+        }
+        const imageUrl = imageUrlMap[feature]
+        updateHowItWorksVisual(imageUrl)
+      }
+
+      function toggleFeatureMobile(element) {
+        const parentElement = element.parentElement
+        const collection = document.getElementsByClassName("how-it-works-feature-mobile")
+        for (let el of collection) {
+          if (el === parentElement) {
+            if (el.classList.contains('active')) {
+              el.classList.remove('active')
+            } else {
+              el.classList.add('active')
+            }            
+          } else {
+            if (el.classList.contains('active')) {
+              el.classList.remove('active')
+            }
+          }
+        }
+      }
+
+      function updateHowItWorksVisual(imagePath) {
+        const visualElement = document.getElementById("how-it-works-visual")
+        visualElement.src = imagePath
       }
     </script>
   </body>
