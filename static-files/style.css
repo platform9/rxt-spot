@@ -781,9 +781,5 @@ h5 {
   .copyright {
     text-align: center;
   }
-
-  .auth0-lock.auth0-lock .auth0-lock-widget-container {
-    height: max-content !important;
-  }
 }
 
