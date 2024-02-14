@@ -88,6 +88,10 @@ h5 {
   float: left;
 }
 
+.nav__list-item:hover {
+  border-bottom: 2px solid #eb0000;
+}
+
 .nav__list-link {
   align-items: center;
   color: #333;
@@ -106,7 +110,7 @@ h5 {
 .nav__login-container {
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  padding: 15px;
 }
 
 .nav__login {
@@ -119,6 +123,12 @@ h5 {
   text-transform: uppercase;
   transition: border-color 0.2s;
   letter-spacing: 1px;
+  padding: 10px;
+}
+
+.nav__login:hover {
+  background-color: #E6E7EA;
+  border-radius: 4px;
 }
 
 .nav__contact-box {
@@ -138,6 +148,10 @@ h5 {
   text-decoration: none;
   transition: background-color 0.2s;
   width: 100%;
+}
+
+.nav__contact-link:hover {
+  background-color: #9e0000;
 }
 
 .nav__mega-mbl {
@@ -326,6 +340,10 @@ h5 {
   white-space: nowrap;
 }
 
+.box-button:hover {
+  background-color: #9e0000;
+}
+
 .header-padding {
   height: 73px;
 }
@@ -394,6 +412,10 @@ h5 {
   border: 1px solid #b4b9bf;
   border-radius: 4px;
   background: #fafafb;
+}
+
+.how-it-works-feature:hover {
+  border: 1px solid #909498;
 }
 
 .how-it-works-feature.active {
@@ -759,4 +781,9 @@ h5 {
   .copyright {
     text-align: center;
   }
+
+  .auth0-lock.auth0-lock .auth0-lock-widget-container {
+    height: max-content !important;
+  }
 }
+
