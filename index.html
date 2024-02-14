@@ -1,1003 +1,1020 @@
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="https://rackspace.com/themes/custom/hansel/favicon.ico"
-    type="image/vnd.microsoft.icon" />
-  <title>Rackspace Spot | Rackspace</title>
-  <link rel="stylesheet" media="all" href="static-files/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PSBG6RSN');</script>
-  <!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EY7B3KH18K"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('set', 'linker', { 'domains': ['spot.rackspace.com', 'cloudspaces.us.auth0.com'] });
-    gtag('js', new Date());
-    gtag('config', 'G-EY7B3KH18K');
-  </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11470842307">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('set', 'linker', { 'domains': ['spot.rackspace.com', 'cloudspaces.us.auth0.com'] });
-    gtag('js', new Date());
-    gtag('config', 'AW-11470842307');
-  </script>
-  <script type="text/javascript">
-    !function () { "use strict"; !function (e, t) { var n = e.amplitude || { _q: [], _iq: {} }; if (n.invoked) e.console && console.error && console.error("Amplitude snippet has been loaded."); else { var r = function (e, t) { e.prototype[t] = function () { return this._q.push({ name: t, args: Array.prototype.slice.call(arguments, 0) }), this } }, s = function (e, t, n) { return function (r) { e._q.push({ name: t, args: Array.prototype.slice.call(n, 0), resolve: r }) } }, o = function (e, t, n) { e[t] = function () { if (n) return { promise: new Promise(s(e, t, Array.prototype.slice.call(arguments))) } } }, i = function (e) { for (var t = 0;t < m.length;t++)o(e, m[t], !1); for (var n = 0;n < g.length;n++)o(e, g[n], !0) }; n.invoked = !0; var u = t.createElement("script"); u.type = "text/javascript", u.integrity = "sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE", u.crossOrigin = "anonymous", u.async = !0, u.src = "https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz", u.onload = function () { e.amplitude.runQueuedFunctions || console.log("[Amplitude] Error: could not load SDK") }; var a = t.getElementsByTagName("script")[0]; a.parentNode.insertBefore(u, a); for (var c = function () { return this._q = [], this }, p = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset", "preInsert", "postInsert", "remove", "getUserProperties"], l = 0;l < p.length;l++)r(c, p[l]); n.Identify = c; for (var d = function () { return this._q = [], this }, f = ["getEventProperties", "setProductId", "setQuantity", "setPrice", "setRevenue", "setRevenueType", "setEventProperties"], v = 0;v < f.length;v++)r(d, f[v]); n.Revenue = d; var m = ["getDeviceId", "setDeviceId", "getSessionId", "setSessionId", "getUserId", "setUserId", "setOptOut", "setTransport", "reset", "extendSession"], g = ["init", "add", "remove", "track", "logEvent", "identify", "groupIdentify", "setGroup", "revenue", "flush"]; i(n), n.createInstance = function (e) { return n._iq[e] = { _q: [] }, i(n._iq[e]), n._iq[e] }, e.amplitude = n } }(window, document) }();
-
-    amplitude.init('f66e70228b82784468071383920321dc', undefined, {
-      defaultTracking: {
-        pageViews: true,
-        sessions: true
-      }
-    });
-  </script>
-  <link href="static-files/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-  <link href="static-files/fontawesome/css/solid.min.css" rel="stylesheet">
-  <link href="static-files/fontawesome/css/regular.min.css" rel="stylesheet">
-  <script src="https://cdn.auth0.com/js/lock/12.4.0/lock.min.js"></script>
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-PSBG6RSN” height=“0" width=“0”
-      style=“display:none;visibility:hidden”></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <nav id="mega-nav" class="nav" role="navigation" aria-label="Primary Navigation">
-    <div class="nav__fluid--container">
-      <div class="nav__base">
-        <div class="nav__logo">
-          <a href="" class="nav__logo-link">
-            <img class="nav__logo-img" loading="lazy" src="static-files/spot-logo-transparent.png" alt="Rackspace Spot">
-          </a>
-        </div>
-        <div class="nav__links">
-          <ul class="nav__list">
-            <li class="nav__list-item">
-              <a href="https://www.rackspace.com/cloud" class="nav__list-link">Solutions</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="https://www.rackspace.com/cloud#platforms" class="nav__list-link">Platforms</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="https://www.rackspace.com/industry" class="nav__list-link">Industries</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav__login-container">
-          <a href="#" class="nav__login" onclick="handleLogInClick('Log In')">Log in</a>
-        </div>
-        <div class="nav__contact-box">
-          <a href="#" class="nav__contact-link" onclick="handleSignUpClick('Sign Up')">
-            Sign Up
-          </a>
-          <a href="#" class="nav__mobile-btn" aria-label="Open" onclick="toggleMobileMenu()"></a>
-        </div>
-      </div>
-      <div class="nav__mega-mbl" id="mobile-menu">
-        <ul class="nav__mega-mbl--list">
-          <li class="nav__mega-mbl--item">
-            <a href="https://www.rackspace.com/cloud" class="nav__mega-mbl--link">Solutions</a>
-          </li>
-          <li class="nav__mega-mbl--item">
-            <a href="https://www.rackspace.com/cloud#platforms" class="nav__mega-mbl--link">Platforms</a>
-          </li>
-          <li class="nav__mega-mbl--item">
-            <a href="https://www.rackspace.com/industry" class="nav__mega-mbl--link">Industries</a>
-          </li>
-          <li class="nav__mega-mbl--item">
-            <a href="#" class="nav__mega-mbl--link" onclick="handleSignUpClick('Sign Up')">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-  </nav>
-  <main>
-    <div class="hero">
-      <div class="header-padding"></div>
-      <div class="hero-content body-width-container">
-        <div class="hero-description">
-          <h1>Rackspace Spot</h1>
-          <h2>
-            Cloud infrastructure auctioned in an open market.<br>
-            Delivered as turnkey, fully managed Kubernetes clusters.
-          </h2>
-        </div>
-        <div class="hero-box-container">
-          <div class="hero-box">
-            <h3>Bid from $0.001/hr</h3>
-            <div class="box-description"><a class="box-button" href="#"
-                onclick="handleLogInClick('Get Started with Rackspace Spot')">Get
-                started with Rackspace Spot</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="how-it-works-section">
-      <div class="body-width-container">
-        <h3 class="section-header">How It works</h3>
-        <div class="how-it-works-content-mobile">
-          <div>
-            <div class="how-it-works-section-label started">
-              <i class="fa-solid fa-timer" style="margin-right: 8px"></i>
-              Get Started in Minutes
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="https://rackspace.com/themes/custom/hansel/favicon.ico"
+         type="image/vnd.microsoft.icon" />
+      <title>Rackspace Spot | Rackspace</title>
+      <link rel="stylesheet" media="all" href="static-files/style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+         rel="stylesheet">
+      <!-- Google Tag Manager -->
+      <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+           'gtm.start':
+             new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+           j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+             'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+         })(window, document, 'script', 'dataLayer', 'GTM-PSBG6RSN');
+      </script>
+      <!-- End Google Tag Manager -->
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EY7B3KH18K"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('set', 'linker', { 'domains': ['spot.rackspace.com', 'cloudspaces.us.auth0.com'] });
+         gtag('js', new Date());
+         gtag('config', 'G-EY7B3KH18K');
+      </script>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11470842307"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('set', 'linker', { 'domains': ['spot.rackspace.com', 'cloudspaces.us.auth0.com'] });
+         gtag('js', new Date());
+         gtag('config', 'AW-11470842307');
+      </script>
+      <script type="text/javascript">
+         !function () { "use strict"; !function (e, t) { var n = e.amplitude || { _q: [], _iq: {} }; if (n.invoked) e.console && console.error && console.error("Amplitude snippet has been loaded."); else { var r = function (e, t) { e.prototype[t] = function () { return this._q.push({ name: t, args: Array.prototype.slice.call(arguments, 0) }), this } }, s = function (e, t, n) { return function (r) { e._q.push({ name: t, args: Array.prototype.slice.call(n, 0), resolve: r }) } }, o = function (e, t, n) { e[t] = function () { if (n) return { promise: new Promise(s(e, t, Array.prototype.slice.call(arguments))) } } }, i = function (e) { for (var t = 0;t < m.length;t++)o(e, m[t], !1); for (var n = 0;n < g.length;n++)o(e, g[n], !0) }; n.invoked = !0; var u = t.createElement("script"); u.type = "text/javascript", u.integrity = "sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE", u.crossOrigin = "anonymous", u.async = !0, u.src = "https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz", u.onload = function () { e.amplitude.runQueuedFunctions || console.log("[Amplitude] Error: could not load SDK") }; var a = t.getElementsByTagName("script")[0]; a.parentNode.insertBefore(u, a); for (var c = function () { return this._q = [], this }, p = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset", "preInsert", "postInsert", "remove", "getUserProperties"], l = 0;l < p.length;l++)r(c, p[l]); n.Identify = c; for (var d = function () { return this._q = [], this }, f = ["getEventProperties", "setProductId", "setQuantity", "setPrice", "setRevenue", "setRevenueType", "setEventProperties"], v = 0;v < f.length;v++)r(d, f[v]); n.Revenue = d; var m = ["getDeviceId", "setDeviceId", "getSessionId", "setSessionId", "getUserId", "setUserId", "setOptOut", "setTransport", "reset", "extendSession"], g = ["init", "add", "remove", "track", "logEvent", "identify", "groupIdentify", "setGroup", "revenue", "flush"]; i(n), n.createInstance = function (e) { return n._iq[e] = { _q: [] }, i(n._iq[e]), n._iq[e] }, e.amplitude = n } }(window, document) }();
+         
+         amplitude.init('f66e70228b82784468071383920321dc', undefined, {
+           defaultTracking: {
+             pageViews: true,
+             sessions: true
+           }
+         });
+      </script>
+      <link href="static-files/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+      <link href="static-files/fontawesome/css/solid.min.css" rel="stylesheet">
+      <link href="static-files/fontawesome/css/regular.min.css" rel="stylesheet">
+      <script src="https://cdn.auth0.com/js/lock/12.4.0/lock.min.js"></script>
+   </head>
+   <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-PSBG6RSN” height=“0" width=“0”
+         style=“display:none;visibility:hidden”></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+      <nav id="mega-nav" class="nav" role="navigation" aria-label="Primary Navigation">
+         <div class="nav__fluid--container">
+         <div class="nav__base">
+            <div class="nav__logo">
+               <a href="" class="nav__logo-link">
+               <img class="nav__logo-img" loading="lazy" src="static-files/spot-logo-transparent.png" alt="Rackspace Spot">
+               </a>
             </div>
-          </div>
-          <div class="how-it-works-features-mobile">
-            <div class="how-it-works-feature-mobile active">
-              <div class="feature-header" onclick="toggleFeatureMobile(this)">
-                <i class="fa-regular fa-cloud-check"></i>
-                <h5>Choose your preferred cloud server type</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">
-                <div>
-                  Choose your preferred server class - whether General Purpose, Compute Heavy or Memory Heavy. Available
-                  in configurations from 1-16 vCPUs, and 1-120GB of RAM.
-                </div>
-                <div class="how-it-works-visual-mobile">
-                  <img src="static-files/spot-1-server-configs.gif" />
-                </div>
-              </div>
+            <div class="nav__links">
+               <ul class="nav__list">
+                  <li class="nav__list-item">
+                     <a href="https://www.rackspace.com/cloud" class="nav__list-link">Solutions</a>
+                  </li>
+                  <li class="nav__list-item">
+                     <a href="https://www.rackspace.com/cloud#platforms" class="nav__list-link">Platforms</a>
+                  </li>
+                  <li class="nav__list-item">
+                     <a href="https://www.rackspace.com/industry" class="nav__list-link">Industries</a>
+                  </li>
+               </ul>
             </div>
-            <div class="how-it-works-feature-mobile">
-              <div class="feature-header" onclick="toggleFeatureMobile(this)">
-                <i class="fa-regular fa-money-check-dollar-pen"></i>
-                <h5>Set your own price by making a bid</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">
-                <div>
-                  To make a bid, specify the highest price you are willing to pay for the selected configuration.
-                  Available servers are allocated in an open market auction, so you will have your servers for as long
-                  as the market price is below your maximum bid price.
-                </div>
-                <div class="how-it-works-visual-mobile">
-                  <img src="static-files/spot-2-bid-easily.png" />
-                </div>
-              </div>
+            <div class="nav__login-container">
+               <a href="#" class="nav__login" onclick="handleLogInClick('Log In')">Log in</a>
             </div>
-            <div class="how-it-works-feature-mobile">
-              <div class="feature-header" onclick="toggleFeatureMobile(this)">
-                <i class="fa-solid fa-terminal"></i>
-                <h5>Consume via kubectl</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">
-                <div>
-                  Your allocated servers are delivered in a Cloudspace, which includes a fully managed Kubernetes
-                  control plane. We fully manage the K8s stack, including the control plane nodes, so you can focus on
-                  getting things done using K8s.
-                </div>
-                <div class="how-it-works-visual-mobile">
-                  <img src="static-files/spot-3-consume-via-kubectl-short.gif" />
-                </div>
-              </div>
+            <div class="nav__contact-box">
+               <a href="#" class="nav__contact-link" onclick="handleSignUpClick('Sign Up')">
+               Sign Up
+               </a>
+               <a href="#" class="nav__mobile-btn" aria-label="Open" onclick="toggleMobileMenu()"></a>
             </div>
-          </div>
-          <div>
-            <div class="how-it-works-section-label confidence" style="margin-top: 12px;">
-              <i class="fa-regular fa-shield-heart" style="margin-right: 8px"></i>
-              Operate with Confidence
-            </div>
-          </div>
-          <div class="how-it-works-features-mobile">
-            <div class="how-it-works-feature-mobile">
-              <div class="feature-header" onclick="toggleFeatureMobile(this)">
-                <i class="fa-solid fa-display-chart-up-circle-dollar"></i>
-                <h5>Stay in control as prices and capacity change</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">
-                <div>
-                  Make informed bids using our “bid price insights” that show you capacity availability at different
-                  price thresholds. You can also set alerts to be informed as market conditions change. Finally, if the
-                  market price rises above your max bid price, you will be notified.
-                </div>
-                <div class="how-it-works-visual-mobile">
-                  <img src="static-files/spot-4-stay-informed.png" />
-                </div>
-              </div>
-            </div>
-            <div class="how-it-works-feature-mobile">
-              <div class="feature-header" onclick="toggleFeatureMobile(this)">
-                <i class="fa-solid fa-webhook"></i>
-                <h5>Automate with Terraform</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">
-                <div>
-                  Automate the provisioning, pre-emption handling, and reconfiguration of your Cloudspaces using our
-                  Terraform provider. Deploy and operate Cloudspaces with 1 simple command.
-                </div>
-                <div class="how-it-works-visual-mobile">
-                  <img src="static-files/spot-5-operate-with-terraform.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="how-it-works-content">
-          <div class="how-it-works-features">
-            <div>
-              <div class="how-it-works-section-label started">
-                <i class="fa-solid fa-timer" style="margin-right: 8px"></i>
-                Get Started in Minutes
-              </div>
-            </div>
-            <div class="how-it-works-feature active">
-              <div class="feature-header" onclick="toggleFeature(this, 'serverClasses')">
-                <i class="fa-regular fa-cloud-check"></i>
-                <h5>Choose your preferred cloud server classes</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">
-                <div>
-                  Choose your preferred server class - whether General Purpose, Compute Heavy or Memory Heavy. Available
-                  in configurations from 1-16 vCPUs, and 1-120GB of RAM.
-                </div>
-              </div>
-            </div>
-            <div class="how-it-works-feature">
-              <div class="feature-header" onclick="toggleFeature(this, 'makeBid')">
-                <i class="fa-regular fa-money-check-dollar-pen"></i>
-                <h5>Set your own price by making a bid</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">To make a bid, specify the highest price you are willing to pay for the selected
-                configuration. Available servers are allocated in an open market auction, so you will have your servers
-                for as long as the market price is below your maximum bid price.</div>
-            </div>
-            <div class="how-it-works-feature">
-              <div class="feature-header" onclick="toggleFeature(this, 'useKubectl')">
-                <i class="fa-solid fa-terminal"></i>
-                <h5>Consume via kubeconfig / kubectl</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">Your allocated servers are delivered in a Cloudspace, which includes a fully
-                managed Kubernetes control plane. We fully manage the K8s stack, including the control plane nodes, so
-                you can focus on getting things done using K8s.</div>
-            </div>
-            <div>
-              <div class="how-it-works-section-label confidence" style="margin-top: 12px;">
-                <i class="fa-regular fa-shield-heart" style="margin-right: 8px"></i>
-                Operate with Confidence
-              </div>
-            </div>
-            <div class="how-it-works-feature">
-              <div class="feature-header" onclick="toggleFeature(this, 'priceChange')">
-                <i class="fa-regular fa-display-chart-up-circle-dollar"></i>
-                <h5>Stay in control as prices and capacity change</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">Make informed bids using our “bid price insights” that show you capacity
-                availability at different price thresholds. You can also set alerts to be informed as market conditions
-                change. Finally, if the market price rises above your max bid price, you will be notified.</div>
-            </div>
-            <div class="how-it-works-feature">
-              <div class="feature-header" onclick="toggleFeature(this, 'automate')">
-                <i class="fa-solid fa-webhook"></i>
-                <h5>Automate with Terraform</h5>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
-                    fill="black"></path>
-                </svg>
-              </div>
-              <div class="feature-text">Automate the provisioning, pre-emption handling, and reconfiguration of your
-                Cloudspaces using our Terraform provider. Deploy and operate Cloudspaces with 1 simple command.</div>
-            </div>
-          </div>
-          <div class="how-it-works-visual">
-            <img id="how-it-works-visual" src="static-files/spot-1-server-configs.gif" />
-          </div>
-        </div>
-        <!-- <div class="how-it-works-frame">
-            <img class="how-it-works-img" src="static-files/how-it-works.png">
-          </div> -->
-      </div>
-    </div>
-    <div class="use-cases-section">
-      <div class="body-width-container">
-        <h3 class="section-header">Key Benefits</h3>
-        <div class="use-cases">
-          <h4>Open market lowers prices</h4>
-          <h4>Fully managed Kubernetes</h4>
-          <h4>Rich Add-Ons</h4>
-          <div>
-            <p>Bid for cloud servers from Rackspace's large inventory of cloud capacity. Bids are fulfilled by an open
-              market auction, within minutes.</p>
-            <p>The market price for servers is determined by the final cut-off price in the auction. Existing bids for
-              capacity are not pre-empted unless the market price exceeds the highest price in the bid.</p>
-          </div>
-          <div>
-            <p>Leverage Kubernetes, without the complexity of managing all the moving parts. The Kubernetes control
-              plane is fully managed, so you don't have to worry about configuring high availability, upgrades, or
-              troubleshooting.</p>
-            <p>In addition, Spot comes out of the box with two storage classes for persistent storage (ssd and sata), a
-              network-policy capable CNI (using Calico), and load balancers.</p>
-          </div>
-          <div>
-            <p>
-              Bring your own favorite K8s helm charts of Operators today, while our engineers are hard at work to
-              include these out-of-the-box, including:
-            <ul>
-              <li>DBaaS operators</li>
-              <li>Cluster backup</li>
-              <li>Enhanced monitoring</li>
-              <li>Security scanning</li>
-              <li>ML/Ops tooling</li>
+         </div>
+         <div class="nav__mega-mbl" id="mobile-menu">
+            <ul class="nav__mega-mbl--list">
+               <li class="nav__mega-mbl--item">
+                  <a href="https://www.rackspace.com/cloud" class="nav__mega-mbl--link">Solutions</a>
+               </li>
+               <li class="nav__mega-mbl--item">
+                  <a href="https://www.rackspace.com/cloud#platforms" class="nav__mega-mbl--link">Platforms</a>
+               </li>
+               <li class="nav__mega-mbl--item">
+                  <a href="https://www.rackspace.com/industry" class="nav__mega-mbl--link">Industries</a>
+               </li>
+               <li class="nav__mega-mbl--item">
+                  <a href="#" class="nav__mega-mbl--link" onclick="handleSignUpClick('Sign Up')">Sign Up</a>
+               </li>
             </ul>
-            </p>
-          </div>
-        </div>
-        <div class="use-cases-sm-screen">
-          <div class="use-case-sm">
-            <h4>Open market auction</h4>
-            <div>
-              <p>Bid for server capacity from Rackspace's large inventory of cloud capacity. Bids are fulfilled by an
-                open market auction, and fulfilled within minutes.</p>
-              <p>The market price for servers is determined by the final cut-off price for capacity (the lowest winning
-                bid). Existing bids for capacity are not pre-empted unless the market price exceeds the highest price in
-                the bid.</p>
+         </div>
+      </nav>
+      <main>
+         <div class="hero">
+            <div class="header-padding"></div>
+            <div class="hero-content body-width-container">
+               <div class="hero-description">
+                  <h1>Rackspace Spot</h1>
+                  <h2>
+                     Cloud infrastructure auctioned in an open market.<br>
+                     Delivered as turnkey, fully managed Kubernetes clusters.
+                  </h2>
+               </div>
+               <div class="hero-box-container">
+                  <div class="hero-box">
+                     <h3>Bid from $0.001/hr</h3>
+                     <div class="box-description"><a class="box-button" href="#"
+                        onclick="handleLogInClick('Get Started with Rackspace Spot')">Get
+                        started with Rackspace Spot</a>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-          <div class="use-case-sm">
-            <h4>Fully managed Kubernetes</h4>
-            <div>
-              <p>Leverage Kubernetes, without the complexity of managing all the moving parts. The Kubernetes control
-                plane is fully managed, so you don't have to worry about configuring high availability, upgrades, or
-                troubleshooting.</p>
-              <p>In addition, Spot comes out of the box with two storage classes for persistent storage (ssd and sata),
-                a network-policy capable CNI (using Calico), and load balancers.</p>
+         </div>
+         <div class="how-it-works-section">
+            <div class="body-width-container">
+               <h3 class="section-header">How It works</h3>
+               <div class="how-it-works-content-mobile">
+                  <div>
+                     <div class="how-it-works-section-label started">
+                        <i class="fa-solid fa-timer" style="margin-right: 8px"></i>
+                        Get Started in Minutes
+                     </div>
+                  </div>
+                  <div class="how-it-works-features-mobile">
+                     <div class="how-it-works-feature-mobile active">
+                        <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                           <i class="fa-regular fa-cloud-check"></i>
+                           <h5>Choose your preferred cloud server type</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">
+                           <div>
+                              Choose your preferred server class - whether General Purpose, Compute Heavy or Memory Heavy. Available
+                              in configurations from 1-16 vCPUs, and 1-120GB of RAM.
+                           </div>
+                           <div class="how-it-works-visual-mobile">
+                              <img src="static-files/spot-1-server-configs.gif" />
+                           </div>
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature-mobile">
+                        <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                           <i class="fa-regular fa-money-check-dollar-pen"></i>
+                           <h5>Set your own price by making a bid</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">
+                           <div>
+                              To make a bid, specify the highest price you are willing to pay for the selected configuration.
+                              Available servers are allocated in an open market auction, so you will have your servers for as long
+                              as the market price is below your maximum bid price.
+                           </div>
+                           <div class="how-it-works-visual-mobile">
+                              <img src="static-files/spot-2-bid-easily.png" />
+                           </div>
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature-mobile">
+                        <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                           <i class="fa-solid fa-terminal"></i>
+                           <h5>Consume via kubectl</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">
+                           <div>
+                              Your allocated servers are delivered in a Cloudspace, which includes a fully managed Kubernetes
+                              control plane. We fully manage the K8s stack, including the control plane nodes, so you can focus on
+                              getting things done using K8s.
+                           </div>
+                           <div class="how-it-works-visual-mobile">
+                              <img src="static-files/spot-3-consume-via-kubectl-short.gif" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="how-it-works-section-label confidence" style="margin-top: 12px;">
+                        <i class="fa-regular fa-shield-heart" style="margin-right: 8px"></i>
+                        Operate with Confidence
+                     </div>
+                  </div>
+                  <div class="how-it-works-features-mobile">
+                     <div class="how-it-works-feature-mobile">
+                        <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                           <i class="fa-solid fa-display-chart-up-circle-dollar"></i>
+                           <h5>Stay in control as prices and capacity change</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">
+                           <div>
+                              Make informed bids using our “bid price insights” that show you capacity availability at different
+                              price thresholds. You can also set alerts to be informed as market conditions change. Finally, if the
+                              market price rises above your max bid price, you will be notified.
+                           </div>
+                           <div class="how-it-works-visual-mobile">
+                              <img src="static-files/spot-4-stay-informed.png" />
+                           </div>
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature-mobile">
+                        <div class="feature-header" onclick="toggleFeatureMobile(this)">
+                           <i class="fa-solid fa-webhook"></i>
+                           <h5>Automate with Terraform</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">
+                           <div>
+                              Automate the provisioning, pre-emption handling, and reconfiguration of your Cloudspaces using our
+                              Terraform provider. Deploy and operate Cloudspaces with 1 simple command.
+                           </div>
+                           <div class="how-it-works-visual-mobile">
+                              <img src="static-files/spot-5-operate-with-terraform.png" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="how-it-works-content">
+                  <div class="how-it-works-features">
+                     <div>
+                        <div class="how-it-works-section-label started">
+                           <i class="fa-solid fa-timer" style="margin-right: 8px"></i>
+                           Get Started in Minutes
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature active">
+                        <div class="feature-header" onclick="toggleFeature(this, 'serverClasses')">
+                           <i class="fa-regular fa-cloud-check"></i>
+                           <h5>Choose your preferred cloud server classes</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">
+                           <div>
+                              Choose your preferred server class - whether General Purpose, Compute Heavy or Memory Heavy. Available
+                              in configurations from 1-16 vCPUs, and 1-120GB of RAM.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature">
+                        <div class="feature-header" onclick="toggleFeature(this, 'makeBid')">
+                           <i class="fa-regular fa-money-check-dollar-pen"></i>
+                           <h5>Set your own price by making a bid</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">To make a bid, specify the highest price you are willing to pay for the selected
+                           configuration. Available servers are allocated in an open market auction, so you will have your servers
+                           for as long as the market price is below your maximum bid price.
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature">
+                        <div class="feature-header" onclick="toggleFeature(this, 'useKubectl')">
+                           <i class="fa-solid fa-terminal"></i>
+                           <h5>Consume via kubeconfig / kubectl</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">Your allocated servers are delivered in a Cloudspace, which includes a fully
+                           managed Kubernetes control plane. We fully manage the K8s stack, including the control plane nodes, so
+                           you can focus on getting things done using K8s.
+                        </div>
+                     </div>
+                     <div>
+                        <div class="how-it-works-section-label confidence" style="margin-top: 12px;">
+                           <i class="fa-regular fa-shield-heart" style="margin-right: 8px"></i>
+                           Operate with Confidence
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature">
+                        <div class="feature-header" onclick="toggleFeature(this, 'priceChange')">
+                           <i class="fa-regular fa-display-chart-up-circle-dollar"></i>
+                           <h5>Stay in control as prices and capacity change</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">Make informed bids using our “bid price insights” that show you capacity
+                           availability at different price thresholds. You can also set alerts to be informed as market conditions
+                           change. Finally, if the market price rises above your max bid price, you will be notified.
+                        </div>
+                     </div>
+                     <div class="how-it-works-feature">
+                        <div class="feature-header" onclick="toggleFeature(this, 'automate')">
+                           <i class="fa-solid fa-webhook"></i>
+                           <h5>Automate with Terraform</h5>
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M6 10.5187L11.9999 17.0035L17.9999 10.5187L16.8988 9.5L11.9999 14.7948L7.10102 9.5L6 10.5187Z"
+                                 fill="black"></path>
+                           </svg>
+                        </div>
+                        <div class="feature-text">Automate the provisioning, pre-emption handling, and reconfiguration of your
+                           Cloudspaces using our Terraform provider. Deploy and operate Cloudspaces with 1 simple command.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="how-it-works-visual">
+                     <img id="how-it-works-visual" src="static-files/spot-1-server-configs.gif" />
+                  </div>
+               </div>
+               <!-- <div class="how-it-works-frame">
+                  <img class="how-it-works-img" src="static-files/how-it-works.png">
+                  </div> -->
             </div>
-          </div>
-          <div class="use-case-sm">
-            <h4>Rich Add-Ons</h4>
-            <div>
-              <p>
-                Bring your own favorite K8s helm charts of Operators today, while our engineers are hard at work to
-                include these out-of-the-box, including:
-              <ul>
-                <li>Cluster backups</li>
-                <li>DBaaS operators</li>
-                <li>Enhanced monitoring</li>
-                <li>Security scanning</li>
-                <li>ML/Ops tooling</li>
-              </ul>
-              </p>
+         </div>
+         <div class="use-cases-section">
+            <div class="body-width-container">
+               <h3 class="section-header">Key Benefits</h3>
+               <div class="use-cases">
+                  <h4>Open market lowers prices</h4>
+                  <h4>Fully managed Kubernetes</h4>
+                  <h4>Rich Add-Ons</h4>
+                  <div>
+                     <p>Bid for cloud servers from Rackspace's large inventory of cloud capacity. Bids are fulfilled by an open
+                        market auction, within minutes.
+                     </p>
+                     <p>The market price for servers is determined by the final cut-off price in the auction. Existing bids for
+                        capacity are not pre-empted unless the market price exceeds the highest price in the bid.
+                     </p>
+                  </div>
+                  <div>
+                     <p>Leverage Kubernetes, without the complexity of managing all the moving parts. The Kubernetes control
+                        plane is fully managed, so you don't have to worry about configuring high availability, upgrades, or
+                        troubleshooting.
+                     </p>
+                     <p>In addition, Spot comes out of the box with two storage classes for persistent storage (ssd and sata), a
+                        network-policy capable CNI (using Calico), and load balancers.
+                     </p>
+                  </div>
+                  <div>
+                     <p>
+                        Bring your own favorite K8s helm charts of Operators today, while our engineers are hard at work to
+                        include these out-of-the-box, including:
+                     <ul>
+                        <li>DBaaS operators</li>
+                        <li>Cluster backup</li>
+                        <li>Enhanced monitoring</li>
+                        <li>Security scanning</li>
+                        <li>ML/Ops tooling</li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+               <div class="use-cases-sm-screen">
+                  <div class="use-case-sm">
+                     <h4>Open market auction</h4>
+                     <div>
+                        <p>Bid for server capacity from Rackspace's large inventory of cloud capacity. Bids are fulfilled by an
+                           open market auction, and fulfilled within minutes.
+                        </p>
+                        <p>The market price for servers is determined by the final cut-off price for capacity (the lowest winning
+                           bid). Existing bids for capacity are not pre-empted unless the market price exceeds the highest price in
+                           the bid.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="use-case-sm">
+                     <h4>Fully managed Kubernetes</h4>
+                     <div>
+                        <p>Leverage Kubernetes, without the complexity of managing all the moving parts. The Kubernetes control
+                           plane is fully managed, so you don't have to worry about configuring high availability, upgrades, or
+                           troubleshooting.
+                        </p>
+                        <p>In addition, Spot comes out of the box with two storage classes for persistent storage (ssd and sata),
+                           a network-policy capable CNI (using Calico), and load balancers.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="use-case-sm">
+                     <h4>Rich Add-Ons</h4>
+                     <div>
+                        <p>
+                           Bring your own favorite K8s helm charts of Operators today, while our engineers are hard at work to
+                           include these out-of-the-box, including:
+                        <ul>
+                           <li>Cluster backups</li>
+                           <li>DBaaS operators</li>
+                           <li>Enhanced monitoring</li>
+                           <li>Security scanning</li>
+                           <li>ML/Ops tooling</li>
+                        </ul>
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="spot-savings-section" id="spot-savings-section">
-      <div class="body-width-container">
-        <h3 class="section-header">Spot The Savings</h3>
-        <div class="savings-comparison-container">
-          <div class="savings-comparison">
-            <div class="comparison-buttons">
-              <div class="comparison-button active" id="reference-a" onclick="togglePriceChart('a')">Scenario A: Tiny
-                Deployment</div>
-              <div class="comparison-button" id="reference-b" onclick="togglePriceChart('b')">Scenario B: Small
-                Deployment</div>
-              <div class="comparison-button" id="reference-c" onclick="togglePriceChart('c')">Scenario C: Growth
-                Deployment</div>
+         </div>
+         <div class="spot-savings-section" id="spot-savings-section">
+            <div class="body-width-container">
+               <h3 class="section-header">Spot The Savings</h3>
+               <div class="savings-comparison-container">
+                  <div class="savings-comparison">
+                     <div class="comparison-buttons">
+                        <div class="comparison-button active" id="reference-a" onclick="togglePriceChart('a')">Scenario A: Tiny
+                           Deployment
+                        </div>
+                        <div class="comparison-button" id="reference-b" onclick="togglePriceChart('b')">Scenario B: Small
+                           Deployment
+                        </div>
+                        <div class="comparison-button" id="reference-c" onclick="togglePriceChart('c')">Scenario C: Growth
+                           Deployment
+                        </div>
+                     </div>
+                     <div class="comparison-template">
+                        <div class="template-content" id="template-a">
+                           <div>1 cluster - 4 x m3.medium nodes</div>
+                           <div>Non-production control plane</div>
+                           <div>1 load balancer</div>
+                        </div>
+                        <div class="template-content" id="template-b" style="display: none">
+                           <div>2 clusters - 4 x m3.large nodes</div>
+                           <div>Production control planes</div>
+                           <div>2 persistent volumes at 5GB</div>
+                           <div>2 load balancers</div>
+                        </div>
+                        <div class="template-content" id="template-c" style="display: none">
+                           <div>4 clusters - 16 x m3.2xlarge nodes</div>
+                           <div>Production control planes</div>
+                           <div>12 persistent volumes at 20GB</div>
+                           <div>4 load balancers</div>
+                        </div>
+                        <div class="fine-print">* Estimated costs, not accounting for network egress and other variable costs.
+                        </div>
+                     </div>
+                     <div class="comparison-cards">
+                        <div class="comparison-card spot">
+                           <div class="comparison-top-section">
+                              <div class="comparison-header">
+                                 <img class="comparison-logo" src="static-files/rackspace-logo.png" alt="Rackspace Logo" />
+                                 <div>Spot</div>
+                              </div>
+                              <div class="comparison-total-price">
+                                 <div>From</div>
+                                 <div id="spot-a-price" class="price">$12.88</div>
+                                 <div id="spot-b-price" class="price" style="display: none">$106.36</div>
+                                 <div id="spot-c-price" class="price" style="display: none">$259.04</div>
+                                 <div>per month*</div>
+                              </div>
+                           </div>
+                           <div class="comparison-bottom-section">
+                              <div id="spot-a-comparisons" class="comparison-items">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x nodes @ $0.72 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>1x non-production control plane @ $0 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>1x load balancer @ $10 /mo</div>
+                                 </div>
+                              </div>
+                              <div id="spot-b-comparisons" class="comparison-items" style="display: none">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>8x nodes @ $0.72 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x production control planes @ $40 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x persistent volumes @ 5GB x $0.06 GB /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x load balancers @ $10 /mo</div>
+                                 </div>
+                              </div>
+                              <div id="spot-c-comparisons" class="comparison-items" style="display: none">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>64x nodes @ $0.72 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x production control planes @ $40 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>12x persistent volumes @ 20GB x $0.06GB /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x load balancers @ $10 /mo</div>
+                                 </div>
+                              </div>
+                              <div class="comparison-note">* Based on current market prices. Market prices will vary over time with
+                                 demand and supply.
+                              </div>
+                           </div>
+                        </div>
+                        <div class="comparison-card">
+                           <div class="comparison-top-section">
+                              <div class="comparison-header">
+                                 <!-- <img class="comparison-logo" src="static-files/aws-logo.svg" alt="AWS Logo"/> -->
+                                 <div class="comparison-logo vertical-center">
+                                    <h3 class="comparison-logo-text">Hyperscalers</h3>
+                                 </div>
+                                 <div>K8s + Spot Instances</div>
+                              </div>
+                              <div class="comparison-total-price">
+                                 <div id="aws-a-price" class="price">$159.42</div>
+                                 <div id="aws-b-price" class="price" style="display: none">$468.86</div>
+                                 <div id="aws-c-price" class="price" style="display: none">$10,925</div>
+                                 <div>per month*</div>
+                              </div>
+                           </div>
+                           <div class="comparison-bottom-section">
+                              <div id="aws-a-comparisons" class="comparison-items">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x nodes @ $17.86 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>1x production control plane @ $72 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>1x load balancer @ $16 /mo</div>
+                                 </div>
+                              </div>
+                              <div id="aws-b-comparisons" class="comparison-items" style="display: none">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>8x nodes @ $36.50 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x production control planes @ $72 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x persistent volumes @ 5GB x $0.08GB /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x load balancers @ $16 /mo</div>
+                                 </div>
+                              </div>
+                              <div id="aws-c-comparisons" class="comparison-items" style="display: none">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>64x nodes @ $166 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x production control planes @ $72 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>12x persistent volumes @ 20GB x $0.08GB /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x load balancers @ $16 /mo</div>
+                                 </div>
+                              </div>
+                              <div class="comparison-note">* Pricing comparison on 11/29/2023.</div>
+                           </div>
+                        </div>
+                        <div class="comparison-card">
+                           <div class="comparison-top-section">
+                              <div class="comparison-header">
+                                 <img class="comparison-logo" src="static-files/digitalocean-logo.png" alt="DigitalOcean Logo" />
+                                 <div>K8s + Droplets</div>
+                              </div>
+                              <div class="comparison-total-price">
+                                 <div id="digitalocean-a-price" class="price">$108</div>
+                                 <div id="digitalocean-b-price" class="price" style="display: none">$628</div>
+                                 <div id="digitalocean-c-price" class="price" style="display: none">$16,456</div>
+                                 <div>per month*</div>
+                              </div>
+                           </div>
+                           <div class="comparison-bottom-section">
+                              <div id="digitalocean-a-comparisons" class="comparison-items">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x nodes @ $24 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>1x non-production control plane @ $0 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>1x load balancer @ $12 /mo</div>
+                                 </div>
+                              </div>
+                              <div id="digitalocean-b-comparisons" class="comparison-items" style="display: none">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>8x nodes @ $63 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x production control planes @ $40 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x 5GB persistent volumes @ $10 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>2x load balancers @ $12 /mo</div>
+                                 </div>
+                              </div>
+                              <div id="digitalocean-c-comparisons" class="comparison-items" style="display: none">
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>64x nodes @ $252 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x production control planes @ $40 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>12x 20GB persistent volumes @ $10 /mo</div>
+                                 </div>
+                                 <div class="comparison-item">
+                                    <div class="check-circle">&#10003</div>
+                                    <div>4x load balancers @ $12 /mo</div>
+                                 </div>
+                              </div>
+                              <div class="comparison-note">* Pricing comparison on 11/29/2023.</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="comparison-template">
-              <div class="template-content" id="template-a">
-                <div>1 cluster - 4 x m3.medium nodes</div>
-                <div>Non-production control plane</div>
-                <div>1 load balancer</div>
-              </div>
-              <div class="template-content" id="template-b" style="display: none">
-                <div>2 clusters - 4 x m3.large nodes</div>
-                <div>Production control planes</div>
-                <div>2 persistent volumes at 5GB</div>
-                <div>2 load balancers</div>
-              </div>
-              <div class="template-content" id="template-c" style="display: none">
-                <div>4 clusters - 16 x m3.2xlarge nodes</div>
-                <div>Production control planes</div>
-                <div>12 persistent volumes at 20GB</div>
-                <div>4 load balancers</div>
-              </div>
-              <div class="fine-print">* Estimated costs, not accounting for network egress and other variable costs.
-              </div>
+         </div>
+         <div class="get-started-section">
+            <div class="body-width-container">
+               <h3 class="section-header">Get started with Spot</h3>
+               <div class="get-started-boxes">
+                  <div class="get-started-box">
+                     <h4>Creating a Cloudspace</h4>
+                     <div>Create a running cloudspace in minutes with just a few clicks. Learn all you need to know about
+                        creating a cloudspace here.</a>
+                     </div>
+                     <a href="https://spot.rackspace.com/docs/create-rackspace-spot-cloudspace">Learn to create a cloudspace
+                     »</a>
+                  </div>
+                  <div class="get-started-box">
+                     <h4>Deploying an App</h4>
+                     <div>Need some help deploying an application? Learn how to deploy an application in your cloudspace with a
+                        detailed tutorial.
+                     </div>
+                     <a href="https://spot.rackspace.com/docs/deploy-app-on-cloudspace">Check out the tutorial »</a>
+                  </div>
+                  <div class="get-started-box">
+                     <h4>Pricing</h4>
+                     <div>Find out how prices stay low and how cloudspace usage is billed.</div>
+                     <a href="https://spot.rackspace.com/docs/rackspace-spot-pricing">Learn how pricing works »</a>
+                  </div>
+               </div>
+               <div class="get-started-boxes">
+                  <div class="get-started-box">
+                     <h4>Open Market Auction</h4>
+                     <div>Transparency is key to a fair auction. Learn all about how Spot's "open market auction" for server
+                        capacity works.</a>
+                     </div>
+                     <a href="https://spot.rackspace.com/docs/open-market-auction">See how auctions are run »</a>
+                  </div>
+                  <div class="get-started-box">
+                     <h4>Understanding Pre-emption</h4>
+                     <div>Spot nodes are pre-empted when the market price for the server type exceeds the maximum bid price.
+                        Understanding and managing spot node pre-emption is vital to keep your cloudspace running smoothly.</a>
+                     </div>
+                     <a href="https://spot.rackspace.com/docs/handling-spot-node-pre-emption">Learn about server pre-emption
+                     »</a>
+                  </div>
+                  <div class="get-started-box">
+                     <h4>Frequently Asked Questions</h4>
+                     <div>Get answers to common questions in our FAQ, or feel free to contact us anytime with your own questions.
+                     </div>
+                     <a href="https://spot.rackspace.com/docs/frequently-asked-questions">Visit the FAQ page »</a>
+                  </div>
+               </div>
             </div>
-            <div class="comparison-cards">
-              <div class="comparison-card spot">
-                <div class="comparison-top-section">
-                  <div class="comparison-header">
-                    <img class="comparison-logo" src="static-files/rackspace-logo.png" alt="Rackspace Logo" />
-                    <div>Spot</div>
-                  </div>
-                  <div class="comparison-total-price">
-                    <div>From</div>
-                    <div id="spot-a-price" class="price">$12.88</div>
-                    <div id="spot-b-price" class="price" style="display: none">$106.36</div>
-                    <div id="spot-c-price" class="price" style="display: none">$259.04</div>
-                    <div>per month*</div>
-                  </div>
-                </div>
-                <div class="comparison-bottom-section">
-                  <div id="spot-a-comparisons" class="comparison-items">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x nodes @ $0.72 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>1x non-production control plane @ $0 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>1x load balancer @ $10 /mo</div>
-                    </div>
-                  </div>
-                  <div id="spot-b-comparisons" class="comparison-items" style="display: none">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>8x nodes @ $0.72 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x production control planes @ $40 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x persistent volumes @ 5GB x $0.06 GB /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x load balancers @ $10 /mo</div>
-                    </div>
-                  </div>
-                  <div id="spot-c-comparisons" class="comparison-items" style="display: none">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>64x nodes @ $0.72 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x production control planes @ $40 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>12x persistent volumes @ 20GB x $0.06GB /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x load balancers @ $10 /mo</div>
-                    </div>
-                  </div>
-                  <div class="comparison-note">* Based on current market prices. Market prices will vary over time with
-                    demand and supply.</div>
-                </div>
-              </div>
-              <div class="comparison-card">
-                <div class="comparison-top-section">
-                  <div class="comparison-header">
-                    <!-- <img class="comparison-logo" src="static-files/aws-logo.svg" alt="AWS Logo"/> -->
-                    <div class="comparison-logo vertical-center">
-                      <h3 class="comparison-logo-text">Hyperscalers</h3>
-                    </div>
-                    <div>K8s + Spot Instances</div>
-                  </div>
-                  <div class="comparison-total-price">
-                    <div id="aws-a-price" class="price">$159.42</div>
-                    <div id="aws-b-price" class="price" style="display: none">$468.86</div>
-                    <div id="aws-c-price" class="price" style="display: none">$10,925</div>
-                    <div>per month*</div>
-                  </div>
-                </div>
-                <div class="comparison-bottom-section">
-                  <div id="aws-a-comparisons" class="comparison-items">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x nodes @ $17.86 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>1x production control plane @ $72 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>1x load balancer @ $16 /mo</div>
-                    </div>
-                  </div>
-                  <div id="aws-b-comparisons" class="comparison-items" style="display: none">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>8x nodes @ $36.50 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x production control planes @ $72 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x persistent volumes @ 5GB x $0.08GB /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x load balancers @ $16 /mo</div>
-                    </div>
-                  </div>
-                  <div id="aws-c-comparisons" class="comparison-items" style="display: none">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>64x nodes @ $166 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x production control planes @ $72 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>12x persistent volumes @ 20GB x $0.08GB /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x load balancers @ $16 /mo</div>
-                    </div>
-                  </div>
-                  <div class="comparison-note">* Pricing comparison on 11/29/2023.</div>
-                </div>
-              </div>
-              <div class="comparison-card">
-                <div class="comparison-top-section">
-                  <div class="comparison-header">
-                    <img class="comparison-logo" src="static-files/digitalocean-logo.png" alt="DigitalOcean Logo" />
-                    <div>K8s + Droplets</div>
-                  </div>
-                  <div class="comparison-total-price">
-                    <div id="digitalocean-a-price" class="price">$108</div>
-                    <div id="digitalocean-b-price" class="price" style="display: none">$628</div>
-                    <div id="digitalocean-c-price" class="price" style="display: none">$16,456</div>
-                    <div>per month*</div>
-                  </div>
-                </div>
-                <div class="comparison-bottom-section">
-                  <div id="digitalocean-a-comparisons" class="comparison-items">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x nodes @ $24 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>1x non-production control plane @ $0 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>1x load balancer @ $12 /mo</div>
-                    </div>
-                  </div>
-                  <div id="digitalocean-b-comparisons" class="comparison-items" style="display: none">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>8x nodes @ $63 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x production control planes @ $40 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x 5GB persistent volumes @ $10 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>2x load balancers @ $12 /mo</div>
-                    </div>
-                  </div>
-                  <div id="digitalocean-c-comparisons" class="comparison-items" style="display: none">
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>64x nodes @ $252 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x production control planes @ $40 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>12x 20GB persistent volumes @ $10 /mo</div>
-                    </div>
-                    <div class="comparison-item">
-                      <div class="check-circle">&#10003</div>
-                      <div>4x load balancers @ $12 /mo</div>
-                    </div>
-                  </div>
-                  <div class="comparison-note">* Pricing comparison on 11/29/2023.</div>
-                </div>
-              </div>
+         </div>
+      </main>
+      <footer class="footer__section">
+         <div class="footer__container">
+            <div class="footer__links">
+               <a href="https://www.rackspace.com/cloud" class="footer__link">Solutions</a>
+               <a href="https://www.rackspace.com/cloud#platforms" class="footer__link">Platforms</a>
+               <a href="https://www.rackspace.com/industry" class="footer__link">Industries</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="get-started-section">
-      <div class="body-width-container">
-        <h3 class="section-header">Get started with Spot</h3>
-        <div class="get-started-boxes">
-          <div class="get-started-box">
-            <h4>Creating a Cloudspace</h4>
-            <div>Create a running cloudspace in minutes with just a few clicks. Learn all you need to know about
-              creating a cloudspace here.</a></div>
-            <a href="https://spot.rackspace.com/docs/create-rackspace-spot-cloudspace">Learn to create a cloudspace
-              »</a>
-          </div>
-          <div class="get-started-box">
-            <h4>Deploying an App</h4>
-            <div>Need some help deploying an application? Learn how to deploy an application in your cloudspace with a
-              detailed tutorial.</div>
-            <a href="https://spot.rackspace.com/docs/deploy-app-on-cloudspace">Check out the tutorial »</a>
-          </div>
-          <div class="get-started-box">
-            <h4>Pricing</h4>
-            <div>Find out how prices stay low and how cloudspace usage is billed.</div>
-            <a href="https://spot.rackspace.com/docs/rackspace-spot-pricing">Learn how pricing works »</a>
-          </div>
-        </div>
-        <div class="get-started-boxes">
-          <div class="get-started-box">
-            <h4>Open Market Auction</h4>
-            <div>Transparency is key to a fair auction. Learn all about how Spot's "open market auction" for server
-              capacity works.</a></div>
-            <a href="https://spot.rackspace.com/docs/open-market-auction">See how auctions are run »</a>
-          </div>
-          <div class="get-started-box">
-            <h4>Understanding Pre-emption</h4>
-            <div>Spot nodes are pre-empted when the market price for the server type exceeds the maximum bid price.
-              Understanding and managing spot node pre-emption is vital to keep your cloudspace running smoothly.</a>
-            </div>
-            <a href="https://spot.rackspace.com/docs/handling-spot-node-pre-emption">Learn about server pre-emption
-              »</a>
-          </div>
-          <div class="get-started-box">
-            <h4>Frequently Asked Questions</h4>
-            <div>Get answers to common questions in our FAQ, or feel free to contact us anytime with your own questions.
-            </div>
-            <a href="https://spot.rackspace.com/docs/frequently-asked-questions">Visit the FAQ page »</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer class="footer__section">
-    <div class="footer__container">
-      <div class="footer__links">
-        <a href="https://www.rackspace.com/cloud" class="footer__link">Solutions</a>
-        <a href="https://www.rackspace.com/cloud#platforms" class="footer__link">Platforms</a>
-        <a href="https://www.rackspace.com/industry" class="footer__link">Industries</a>
-      </div>
-      <div class="copyright">© 2024 RACKSPACE TECHNOLOGY</div>
-    </div>
-  </footer>
-  <script>
-    let redirectUrl = `https://${window.location.host}/ui`
-    const defaultClientId = 'mwG3lUMV8KyeMqHe4fJ5Bb3nM1vBvRNa'
-    const defaultDomain = 'cloudspaces.us.auth0.com'
-
-    const options = {
-      auth: {
-        redirectUrl,
-        responseType: "token",
-      },
-      theme: {
-        logo: "https://spot.rackspace.com/static-files/spot-logo-transparent.png",
-        primaryColor: "#c91508",
-      },
-      languageDictionary: {
-        emailInputPlaceholder: "Email",
-        passwordInputPlaceholder: "Password",
-        forgotPasswordAction: "Forgot Password?",
-        title: "",
-      },
-      usernameStyle: "email",
-      allowShowPassword: true,
-    }
-
-    async function getClientInfo() {
-      const url = `https://${window.location.host}/apis/auth.ngpc.rxt.io/v1/clients`
-      try {
-        const response = await fetch(url)
-        const clients = await response.json()
-        const uiClient = (clients || []).find((c) => c.name === 'NGPC UI')
-        return uiClient
-      }
-      catch (err) {
-        console.log("Error fetching clients", err)
-      }
-    }
-
-    let lock = null
-
-    getClientInfo().then((client = {}) => {
-      const { client_id, domain } = client
-      lock = new Auth0Lock(client_id || defaultClientId, domain || defaultDomain, options);
-      // Adjust the height of the Auth0 Lock widget
-      lock.on("show", function () {
-        // Wait for the next tick to ensure the DOM has updated
-        setTimeout(function () {
-          const lockWidget = document.querySelector(".auth0-lock-widget")
-          if (lockWidget) {
-            lockWidget.style.height = "max-content"
-            lockWidget.style.width = "350px"
-          }
-        }, 1)
-      })
-    });
-  </script>
-  <script>
-    gtag("event", "Viewed Home Page", {})
-
-    let lastKnownScrollPosition = 0
-    let ticking = false
-
-    function scrollEvent(event) {
-      lastKnownScrollPosition = window.scrollY
-      const boundingRectOfPricing = document
-        .getElementById("spot-savings-section")
-        .getBoundingClientRect()
-
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          ticking = false
-          if (boundingRectOfPricing.y < 0) {
-            document.removeEventListener("scroll", scrollEvent)
-            gtag("event", "Viewed Pricing Comparison", {})
-          }
-        })
-
-        ticking = true
-      }
-    }
-
-    document.addEventListener("scroll", scrollEvent)
-
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById("mobile-menu")
-      if (mobileMenu.style.display === "none") {
-        mobileMenu.style.display = "block"
-      } else if (mobileMenu.style.display === "") {
-        mobileMenu.style.display = "block"
-      } else {
-        mobileMenu.style.display = "none"
-      }
-    }
-
-    function resetActiveTabs() {
-      const tabA = document.getElementById("reference-a")
-      const tabB = document.getElementById("reference-b")
-      const tabC = document.getElementById("reference-c")
-      tabA.classList.remove("active")
-      tabB.classList.remove("active")
-      tabC.classList.remove("active")
-    }
-
-    function setTabActive(type) {
-      const tab = document.getElementById(`reference-${type}`)
-      tab.classList.add("active")
-    }
-
-    function resetActiveCopy() {
-      const templateA = document.getElementById("template-a")
-      const templateB = document.getElementById("template-b")
-      const templateC = document.getElementById("template-c")
-      const spotAPrice = document.getElementById("spot-a-price")
-      const spotAComparisons = document.getElementById("spot-a-comparisons")
-      const spotBPrice = document.getElementById("spot-b-price")
-      const spotBComparisons = document.getElementById("spot-b-comparisons")
-      const spotCPrice = document.getElementById("spot-c-price")
-      const spotCComparisons = document.getElementById("spot-c-comparisons")
-      const awsAPrice = document.getElementById("aws-a-price")
-      const awsAComparisons = document.getElementById("aws-a-comparisons")
-      const awsBPrice = document.getElementById("aws-b-price")
-      const awsBComparisons = document.getElementById("aws-b-comparisons")
-      const awsCPrice = document.getElementById("aws-c-price")
-      const awsCComparisons = document.getElementById("aws-c-comparisons")
-      const digitaloceanAPrice = document.getElementById("digitalocean-a-price")
-      const digitaloceanAComparisons = document.getElementById(
-        "digitalocean-a-comparisons"
-      )
-      const digitaloceanBPrice = document.getElementById("digitalocean-b-price")
-      const digitaloceanBComparisons = document.getElementById(
-        "digitalocean-b-comparisons"
-      )
-      const digitaloceanCPrice = document.getElementById("digitalocean-c-price")
-      const digitaloceanCComparisons = document.getElementById(
-        "digitalocean-c-comparisons"
-      )
-      templateA.style.display = "none"
-      templateB.style.display = "none"
-      templateC.style.display = "none"
-      spotAPrice.style.display = "none"
-      spotAComparisons.style.display = "none"
-      spotBPrice.style.display = "none"
-      spotBComparisons.style.display = "none"
-      spotCPrice.style.display = "none"
-      spotCComparisons.style.display = "none"
-      awsAPrice.style.display = "none"
-      awsAComparisons.style.display = "none"
-      awsBPrice.style.display = "none"
-      awsBComparisons.style.display = "none"
-      awsCPrice.style.display = "none"
-      awsCComparisons.style.display = "none"
-      digitaloceanAPrice.style.display = "none"
-      digitaloceanAComparisons.style.display = "none"
-      digitaloceanBPrice.style.display = "none"
-      digitaloceanBComparisons.style.display = "none"
-      digitaloceanCPrice.style.display = "none"
-      digitaloceanCComparisons.style.display = "none"
-    }
-
-    function setActiveCopy(type) {
-      const template = document.getElementById(`template-${type}`)
-      const spotPrice = document.getElementById(`spot-${type}-price`)
-      const spotComparisons = document.getElementById(`spot-${type}-comparisons`)
-      const awsPrice = document.getElementById(`aws-${type}-price`)
-      const awsComparisons = document.getElementById(`aws-${type}-comparisons`)
-      const digitaloceanPrice = document.getElementById(
-        `digitalocean-${type}-price`
-      )
-      const digitaloceanComparisons = document.getElementById(
-        `digitalocean-${type}-comparisons`
-      )
-      template.style.display = "flex"
-      spotPrice.style.display = "block"
-      spotComparisons.style.display = "grid"
-      awsPrice.style.display = "block"
-      awsComparisons.style.display = "grid"
-      digitaloceanPrice.style.display = "block"
-      digitaloceanComparisons.style.display = "grid"
-    }
-
-    function togglePriceChart(type) {
-      gtag("event", "Price Comparison - Clicked scenario " + type, {})
-      amplitude.track("Price Comparison - Clicked scenario " + type)
-      resetActiveTabs()
-      setTabActive(type)
-      resetActiveCopy()
-      setActiveCopy(type)
-    }
-
-    function handleLogInClick(source) {
-      gtag("event", `Clicked ${source} button`, {});
-      amplitude.track(`Clicked ${source} button`);
-
-      lock.checkSession({
-        redirect_uri: redirectUrl,
-        responseType: "token id_token",
-      }, function (err, authResult) {
-        if (err) {
-          lock.show({ initialScreen: source === 'Log In' ? "login" : "signUp" })
-        }
-        else {
-          window.location.href = '/ui'
-        }
-      })
-    }
-
-    function handleSignUpClick() {
-      gtag("event", "Clicked Sign Up button", {});
-      amplitude.track("Clicked Sign Up button");
-      lock.show({ allowLogin: false });
-    }
-
-
-    function trackEvent(name) {
-      amplitude.track(name)
-    }
-
-    const imageUrlMap = {
-      serverClasses: "static-files/spot-1-server-configs.gif",
-      makeBid: "static-files/spot-2-bid-easily.png",
-      useKubectl: "static-files/spot-3-consume-via-kubectl-short.gif",
-      priceChange: "static-files/spot-4-stay-informed.png",
-      automate: "static-files/spot-5-operate-with-terraform.png",
-    }
-
-    function toggleFeature(element, feature) {
-      const parentElement = element.parentElement
-      const collection = document.getElementsByClassName("how-it-works-feature")
-      for (let el of collection) {
-        if (el === parentElement) {
-          if (el.classList.contains("active")) {
-            el.classList.remove("active")
-          } else {
-            el.classList.add("active")
-          }
-        } else {
-          if (el.classList.contains("active")) {
-            el.classList.remove("active")
-          }
-        }
-      }
-      const imageUrl = imageUrlMap[feature]
-      updateHowItWorksVisual(imageUrl)
-    }
-
-    function toggleFeatureMobile(element) {
-      const parentElement = element.parentElement
-      const collection = document.getElementsByClassName(
-        "how-it-works-feature-mobile"
-      )
-      for (let el of collection) {
-        if (el === parentElement) {
-          if (el.classList.contains("active")) {
-            el.classList.remove("active")
-          } else {
-            el.classList.add("active")
-          }
-        } else {
-          if (el.classList.contains("active")) {
-            el.classList.remove("active")
-          }
-        }
-      }
-    }
-
-    function updateHowItWorksVisual(imagePath) {
-      const visualElement = document.getElementById("how-it-works-visual")
-      visualElement.src = imagePath
-    }
-  </script>
-</body>
-
+            <div class="copyright">© 2024 RACKSPACE TECHNOLOGY</div>
+         </div>
+      </footer>
+      <script>
+         let redirectUrl = `https://${window.location.host}/ui`
+         const defaultClientId = 'mwG3lUMV8KyeMqHe4fJ5Bb3nM1vBvRNa'
+         const defaultDomain = 'cloudspaces.us.auth0.com'
+         
+         const options = {
+           auth: {
+             redirectUrl,
+             responseType: "token",
+           },
+           theme: {
+             logo: "https://spot.rackspace.com/static-files/spot-logo-transparent.png",
+             primaryColor: "#c91508",
+           },
+           languageDictionary: {
+             emailInputPlaceholder: "Email",
+             passwordInputPlaceholder: "Password",
+             forgotPasswordAction: "Forgot Password?",
+             title: "",
+           },
+           usernameStyle: "email",
+           allowShowPassword: true,
+         }
+         
+         async function getClientInfo() {
+           const url = `https://${window.location.host}/apis/auth.ngpc.rxt.io/v1/clients`
+           try {
+             const response = await fetch(url)
+             const clients = await response.json()
+             const uiClient = (clients || []).find((c) => c.name === 'NGPC UI')
+             return uiClient
+           }
+           catch (err) {
+             console.log("Error fetching clients", err)
+           }
+         }
+         
+         let lock = null
+         
+         getClientInfo().then((client = {}) => {
+           const { client_id, domain } = client
+           lock = new Auth0Lock(client_id || defaultClientId, domain || defaultDomain, options);
+           // Adjust the height of the Auth0 Lock widget
+           lock.on("show", function () {
+             // Wait for the next tick to ensure the DOM has updated
+             setTimeout(function () {
+               const lockWidget = document.querySelector(".auth0-lock-widget")
+               if (lockWidget) {
+                 lockWidget.style.height = "max-content"
+                 lockWidget.style.width = "350px"
+               }
+             }, 1)
+           })
+         });
+      </script>
+      <script>
+         gtag("event", "Viewed Home Page", {})
+         
+         let lastKnownScrollPosition = 0
+         let ticking = false
+         
+         function scrollEvent(event) {
+           lastKnownScrollPosition = window.scrollY
+           const boundingRectOfPricing = document
+             .getElementById("spot-savings-section")
+             .getBoundingClientRect()
+         
+           if (!ticking) {
+             window.requestAnimationFrame(() => {
+               ticking = false
+               if (boundingRectOfPricing.y < 0) {
+                 document.removeEventListener("scroll", scrollEvent)
+                 gtag("event", "Viewed Pricing Comparison", {})
+               }
+             })
+         
+             ticking = true
+           }
+         }
+         
+         document.addEventListener("scroll", scrollEvent)
+         
+         function toggleMobileMenu() {
+           const mobileMenu = document.getElementById("mobile-menu")
+           if (mobileMenu.style.display === "none") {
+             mobileMenu.style.display = "block"
+           } else if (mobileMenu.style.display === "") {
+             mobileMenu.style.display = "block"
+           } else {
+             mobileMenu.style.display = "none"
+           }
+         }
+         
+         function resetActiveTabs() {
+           const tabA = document.getElementById("reference-a")
+           const tabB = document.getElementById("reference-b")
+           const tabC = document.getElementById("reference-c")
+           tabA.classList.remove("active")
+           tabB.classList.remove("active")
+           tabC.classList.remove("active")
+         }
+         
+         function setTabActive(type) {
+           const tab = document.getElementById(`reference-${type}`)
+           tab.classList.add("active")
+         }
+         
+         function resetActiveCopy() {
+           const templateA = document.getElementById("template-a")
+           const templateB = document.getElementById("template-b")
+           const templateC = document.getElementById("template-c")
+           const spotAPrice = document.getElementById("spot-a-price")
+           const spotAComparisons = document.getElementById("spot-a-comparisons")
+           const spotBPrice = document.getElementById("spot-b-price")
+           const spotBComparisons = document.getElementById("spot-b-comparisons")
+           const spotCPrice = document.getElementById("spot-c-price")
+           const spotCComparisons = document.getElementById("spot-c-comparisons")
+           const awsAPrice = document.getElementById("aws-a-price")
+           const awsAComparisons = document.getElementById("aws-a-comparisons")
+           const awsBPrice = document.getElementById("aws-b-price")
+           const awsBComparisons = document.getElementById("aws-b-comparisons")
+           const awsCPrice = document.getElementById("aws-c-price")
+           const awsCComparisons = document.getElementById("aws-c-comparisons")
+           const digitaloceanAPrice = document.getElementById("digitalocean-a-price")
+           const digitaloceanAComparisons = document.getElementById(
+             "digitalocean-a-comparisons"
+           )
+           const digitaloceanBPrice = document.getElementById("digitalocean-b-price")
+           const digitaloceanBComparisons = document.getElementById(
+             "digitalocean-b-comparisons"
+           )
+           const digitaloceanCPrice = document.getElementById("digitalocean-c-price")
+           const digitaloceanCComparisons = document.getElementById(
+             "digitalocean-c-comparisons"
+           )
+           templateA.style.display = "none"
+           templateB.style.display = "none"
+           templateC.style.display = "none"
+           spotAPrice.style.display = "none"
+           spotAComparisons.style.display = "none"
+           spotBPrice.style.display = "none"
+           spotBComparisons.style.display = "none"
+           spotCPrice.style.display = "none"
+           spotCComparisons.style.display = "none"
+           awsAPrice.style.display = "none"
+           awsAComparisons.style.display = "none"
+           awsBPrice.style.display = "none"
+           awsBComparisons.style.display = "none"
+           awsCPrice.style.display = "none"
+           awsCComparisons.style.display = "none"
+           digitaloceanAPrice.style.display = "none"
+           digitaloceanAComparisons.style.display = "none"
+           digitaloceanBPrice.style.display = "none"
+           digitaloceanBComparisons.style.display = "none"
+           digitaloceanCPrice.style.display = "none"
+           digitaloceanCComparisons.style.display = "none"
+         }
+         
+         function setActiveCopy(type) {
+           const template = document.getElementById(`template-${type}`)
+           const spotPrice = document.getElementById(`spot-${type}-price`)
+           const spotComparisons = document.getElementById(`spot-${type}-comparisons`)
+           const awsPrice = document.getElementById(`aws-${type}-price`)
+           const awsComparisons = document.getElementById(`aws-${type}-comparisons`)
+           const digitaloceanPrice = document.getElementById(
+             `digitalocean-${type}-price`
+           )
+           const digitaloceanComparisons = document.getElementById(
+             `digitalocean-${type}-comparisons`
+           )
+           template.style.display = "flex"
+           spotPrice.style.display = "block"
+           spotComparisons.style.display = "grid"
+           awsPrice.style.display = "block"
+           awsComparisons.style.display = "grid"
+           digitaloceanPrice.style.display = "block"
+           digitaloceanComparisons.style.display = "grid"
+         }
+         
+         function togglePriceChart(type) {
+           gtag("event", "Price Comparison - Clicked scenario " + type, {})
+           amplitude.track("Price Comparison - Clicked scenario " + type)
+           resetActiveTabs()
+           setTabActive(type)
+           resetActiveCopy()
+           setActiveCopy(type)
+         }
+         
+         function handleLogInClick(source) {
+           gtag("event", `Clicked ${source} button`, {});
+           amplitude.track(`Clicked ${source} button`);
+         
+           lock.checkSession({
+             redirect_uri: redirectUrl,
+             responseType: "token id_token",
+           }, function (err, authResult) {
+             if (err) {
+               lock.show({ initialScreen: source === 'Log In' ? "login" : "signUp" })
+             }
+             else {
+               window.location.href = '/ui'
+             }
+           })
+         }
+         
+         function handleSignUpClick() {
+           gtag("event", "Clicked Sign Up button", {});
+           amplitude.track("Clicked Sign Up button");
+           lock.show({ allowLogin: false });
+         }
+         
+         
+         function trackEvent(name) {
+           amplitude.track(name)
+         }
+         
+         const imageUrlMap = {
+           serverClasses: "static-files/spot-1-server-configs.gif",
+           makeBid: "static-files/spot-2-bid-easily.png",
+           useKubectl: "static-files/spot-3-consume-via-kubectl-short.gif",
+           priceChange: "static-files/spot-4-stay-informed.png",
+           automate: "static-files/spot-5-operate-with-terraform.png",
+         }
+         
+         function toggleFeature(element, feature) {
+           const parentElement = element.parentElement
+           const collection = document.getElementsByClassName("how-it-works-feature")
+           for (let el of collection) {
+             if (el === parentElement) {
+               if (el.classList.contains("active")) {
+                 el.classList.remove("active")
+               } else {
+                 el.classList.add("active")
+               }
+             } else {
+               if (el.classList.contains("active")) {
+                 el.classList.remove("active")
+               }
+             }
+           }
+           const imageUrl = imageUrlMap[feature]
+           updateHowItWorksVisual(imageUrl)
+         }
+         
+         function toggleFeatureMobile(element) {
+           const parentElement = element.parentElement
+           const collection = document.getElementsByClassName(
+             "how-it-works-feature-mobile"
+           )
+           for (let el of collection) {
+             if (el === parentElement) {
+               if (el.classList.contains("active")) {
+                 el.classList.remove("active")
+               } else {
+                 el.classList.add("active")
+               }
+             } else {
+               if (el.classList.contains("active")) {
+                 el.classList.remove("active")
+               }
+             }
+           }
+         }
+         
+         function updateHowItWorksVisual(imagePath) {
+           const visualElement = document.getElementById("how-it-works-visual")
+           visualElement.src = imagePath
+         }
+      </script>
+   </body>
 </html>
