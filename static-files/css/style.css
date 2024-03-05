@@ -227,7 +227,7 @@ h5 {
 
 .hero {
   /* background-image: url(https://d1.awsstatic.com/logos/rds/ImgHead_RDS_2021.342f49b453ba17561a5aed200f4cad66b7f0a246.jpg); */
-  background-image: url(banner-img.jpg);
+  background-image: url('../images/banner-img.jpg');
   background-position: bottom;
   background-size: cover;
   display: grid;
@@ -652,7 +652,7 @@ h5 {
 
 .get-started-section {
   padding: 40px 0px;
-  background-image: url(polygons_background.svg);
+  background-image: url('../images/polygons_background.svg');
 }
 
 .get-started-section h3 {

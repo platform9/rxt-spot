@@ -7,7 +7,7 @@
    <link rel="shortcut icon" href="https://rackspace.com/themes/custom/hansel/favicon.ico"
       type="image/vnd.microsoft.icon" />
    <title>Rackspace Spot | Rackspace</title>
-   <link rel="stylesheet" media="all" href="static-files/style.css" />
+   <link rel="stylesheet" media="all" href="static-files/css/style.css" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
@@ -56,72 +56,7 @@
    <link href="static-files/fontawesome/css/solid.min.css" rel="stylesheet">
    <link href="static-files/fontawesome/css/regular.min.css" rel="stylesheet">
    <script src="https://cdn.auth0.com/js/lock/12.4.0/lock.min.js"></script>
-   <script>
-      const redirectUrl = `https://${window.location.host}/ui`
-      var lock = null
-      var webAuth = null
-      var rackspaceLoginURL = null
-
-      const options = {
-         auth: {
-            redirectUrl,
-            responseType: "token",
-         },
-         theme: {
-            logo: "https://spot.rackspace.com/static-files/spot-logo-transparent.png",
-            primaryColor: "#c91508",
-         },
-         languageDictionary: {
-            emailInputPlaceholder: "Email",
-            passwordInputPlaceholder: "Password",
-            forgotPasswordAction: "Forgot Password?",
-            title: "",
-         },
-         usernameStyle: "email",
-         allowShowPassword: true,
-      }
-
-      async function getClientInfo() {
-         const url = `https://${window.location.host}/apis/auth.ngpc.rxt.io/v1/clients`
-         try {
-            const response = await fetch(url)
-            const clients = await response.json()
-            const uiClient = (clients || []).find((c) => c.name === 'NGPC UI')
-            return uiClient
-         }
-         catch (err) {
-            console.error("Error fetching clients", err)
-         }
-      }
-
-      async function initializeAuth0Lock({ client_id, domain }) {
-         if (!client_id || !domain) {
-            console.error('Cannot initialize Auth0 Lock: client_id or domain not found')
-            return
-         }
-         // Initialize Lock for regular sign up and logins
-         lock = new Auth0Lock(client_id, domain, options);
-         // Adjust the height of the Auth0 Lock widget
-         lock.on("show", function () {
-            // Wait for the next tick to ensure the DOM has updated
-            setTimeout(function () {
-               const lockWidget = document.querySelector(".auth0-lock-widget")
-               if (lockWidget) {
-                  lockWidget.style.height = "max-content"
-                  lockWidget.style.width = "350px"
-               }
-            }, 1)
-         })
-      }
-
-      function initializeAuth0() {
-         getClientInfo().then((client) => {
-            initializeAuth0Lock(client)
-         });
-      }
-
-      initializeAuth0()
-   </script>
+   <script type="text/javascript" src="/static-files/js/auth0.js"></script>
 </head>
 
 <body>
@@ -134,7 +69,7 @@
          <div class="nav__base">
             <div class="nav__logo">
                <a href="" class="nav__logo-link">
-                  <img class="nav__logo-img" loading="lazy" src="static-files/spot-logo-transparent.png"
+                  <img class="nav__logo-img" loading="lazy" src="static-files/images/spot-logo-transparent.png"
                      alt="Rackspace Spot">
                </a>
             </div>
@@ -228,7 +163,7 @@
                            in configurations from 1-16 vCPUs, and 1-120GB of RAM.
                         </div>
                         <div class="how-it-works-visual-mobile">
-                           <img src="static-files/spot-1-server-configs.gif" />
+                           <img src="static-files/images/spot-1-server-configs.gif" />
                         </div>
                      </div>
                   </div>
@@ -251,7 +186,7 @@
                            as the market price is below your maximum bid price.
                         </div>
                         <div class="how-it-works-visual-mobile">
-                           <img src="static-files/spot-2-bid-easily.png" />
+                           <img src="static-files/images/spot-2-bid-easily.png" />
                         </div>
                      </div>
                   </div>
@@ -274,7 +209,7 @@
                            getting things done using K8s.
                         </div>
                         <div class="how-it-works-visual-mobile">
-                           <img src="static-files/spot-3-consume-via-kubectl-short.gif" />
+                           <img src="static-files/images/spot-3-consume-via-kubectl-short.gif" />
                         </div>
                      </div>
                   </div>
@@ -305,7 +240,7 @@
                            market price rises above your max bid price, you will be notified.
                         </div>
                         <div class="how-it-works-visual-mobile">
-                           <img src="static-files/spot-4-stay-informed.png" />
+                           <img src="static-files/images/spot-4-stay-informed.png" />
                         </div>
                      </div>
                   </div>
@@ -326,7 +261,7 @@
                            Terraform provider. Deploy and operate Cloudspaces with 1 simple command.
                         </div>
                         <div class="how-it-works-visual-mobile">
-                           <img src="static-files/spot-5-operate-with-terraform.png" />
+                           <img src="static-files/images/spot-5-operate-with-terraform.png" />
                         </div>
                      </div>
                   </div>
@@ -431,7 +366,7 @@
                   </div>
                </div>
                <div class="how-it-works-visual">
-                  <img id="how-it-works-visual" src="static-files/spot-1-server-configs.gif" />
+                  <img id="how-it-works-visual" src="static-files/images/spot-1-server-configs.gif" />
                </div>
             </div>
             <!-- <div class="how-it-works-frame">
@@ -576,7 +511,8 @@
                      <div class="comparison-card spot">
                         <div class="comparison-top-section">
                            <div class="comparison-header">
-                              <img class="comparison-logo" src="static-files/rackspace-logo.png" alt="Rackspace Logo" />
+                              <img class="comparison-logo" src="static-files/images/rackspace-logo.png"
+                                 alt="Rackspace Logo" />
                               <div>Spot</div>
                            </div>
                            <div class="comparison-total-price">
@@ -717,7 +653,7 @@
                      <div class="comparison-card">
                         <div class="comparison-top-section">
                            <div class="comparison-header">
-                              <img class="comparison-logo" src="static-files/digitalocean-logo.png"
+                              <img class="comparison-logo" src="static-files/images/digitalocean-logo.png"
                                  alt="DigitalOcean Logo" />
                               <div>K8s + Droplets</div>
                            </div>
@@ -855,229 +791,7 @@
          <div class="copyright">© 2024 RACKSPACE TECHNOLOGY</div>
       </div>
    </footer>
-   <script>
-      gtag("event", "Viewed Home Page", {})
-
-      let lastKnownScrollPosition = 0
-      let ticking = false
-
-      function scrollEvent(event) {
-         lastKnownScrollPosition = window.scrollY
-         const boundingRectOfPricing = document
-            .getElementById("spot-savings-section")
-            .getBoundingClientRect()
-
-         if (!ticking) {
-            window.requestAnimationFrame(() => {
-               ticking = false
-               if (boundingRectOfPricing.y < 0) {
-                  document.removeEventListener("scroll", scrollEvent)
-                  gtag("event", "Viewed Pricing Comparison", {})
-               }
-            })
-
-            ticking = true
-         }
-      }
-
-      document.addEventListener("scroll", scrollEvent)
-
-      function toggleMobileMenu() {
-         const mobileMenu = document.getElementById("mobile-menu")
-         if (mobileMenu.style.display === "none") {
-            mobileMenu.style.display = "block"
-         } else if (mobileMenu.style.display === "") {
-            mobileMenu.style.display = "block"
-         } else {
-            mobileMenu.style.display = "none"
-         }
-      }
-
-      function resetActiveTabs() {
-         const tabA = document.getElementById("reference-a")
-         const tabB = document.getElementById("reference-b")
-         const tabC = document.getElementById("reference-c")
-         tabA.classList.remove("active")
-         tabB.classList.remove("active")
-         tabC.classList.remove("active")
-      }
-
-      function setTabActive(type) {
-         const tab = document.getElementById(`reference-${type}`)
-         tab.classList.add("active")
-      }
-
-      function resetActiveCopy() {
-         const templateA = document.getElementById("template-a")
-         const templateB = document.getElementById("template-b")
-         const templateC = document.getElementById("template-c")
-         const spotAPrice = document.getElementById("spot-a-price")
-         const spotAComparisons = document.getElementById("spot-a-comparisons")
-         const spotBPrice = document.getElementById("spot-b-price")
-         const spotBComparisons = document.getElementById("spot-b-comparisons")
-         const spotCPrice = document.getElementById("spot-c-price")
-         const spotCComparisons = document.getElementById("spot-c-comparisons")
-         const awsAPrice = document.getElementById("aws-a-price")
-         const awsAComparisons = document.getElementById("aws-a-comparisons")
-         const awsBPrice = document.getElementById("aws-b-price")
-         const awsBComparisons = document.getElementById("aws-b-comparisons")
-         const awsCPrice = document.getElementById("aws-c-price")
-         const awsCComparisons = document.getElementById("aws-c-comparisons")
-         const digitaloceanAPrice = document.getElementById("digitalocean-a-price")
-         const digitaloceanAComparisons = document.getElementById(
-            "digitalocean-a-comparisons"
-         )
-         const digitaloceanBPrice = document.getElementById("digitalocean-b-price")
-         const digitaloceanBComparisons = document.getElementById(
-            "digitalocean-b-comparisons"
-         )
-         const digitaloceanCPrice = document.getElementById("digitalocean-c-price")
-         const digitaloceanCComparisons = document.getElementById(
-            "digitalocean-c-comparisons"
-         )
-         templateA.style.display = "none"
-         templateB.style.display = "none"
-         templateC.style.display = "none"
-         spotAPrice.style.display = "none"
-         spotAComparisons.style.display = "none"
-         spotBPrice.style.display = "none"
-         spotBComparisons.style.display = "none"
-         spotCPrice.style.display = "none"
-         spotCComparisons.style.display = "none"
-         awsAPrice.style.display = "none"
-         awsAComparisons.style.display = "none"
-         awsBPrice.style.display = "none"
-         awsBComparisons.style.display = "none"
-         awsCPrice.style.display = "none"
-         awsCComparisons.style.display = "none"
-         digitaloceanAPrice.style.display = "none"
-         digitaloceanAComparisons.style.display = "none"
-         digitaloceanBPrice.style.display = "none"
-         digitaloceanBComparisons.style.display = "none"
-         digitaloceanCPrice.style.display = "none"
-         digitaloceanCComparisons.style.display = "none"
-      }
-
-      function setActiveCopy(type) {
-         const template = document.getElementById(`template-${type}`)
-         const spotPrice = document.getElementById(`spot-${type}-price`)
-         const spotComparisons = document.getElementById(`spot-${type}-comparisons`)
-         const awsPrice = document.getElementById(`aws-${type}-price`)
-         const awsComparisons = document.getElementById(`aws-${type}-comparisons`)
-         const digitaloceanPrice = document.getElementById(
-            `digitalocean-${type}-price`
-         )
-         const digitaloceanComparisons = document.getElementById(
-            `digitalocean-${type}-comparisons`
-         )
-         template.style.display = "flex"
-         spotPrice.style.display = "block"
-         spotComparisons.style.display = "grid"
-         awsPrice.style.display = "block"
-         awsComparisons.style.display = "grid"
-         digitaloceanPrice.style.display = "block"
-         digitaloceanComparisons.style.display = "grid"
-      }
-
-      function togglePriceChart(type) {
-         gtag("event", "Price Comparison - Clicked scenario " + type, {})
-         amplitude.track("Price Comparison - Clicked scenario " + type)
-         resetActiveTabs()
-         setTabActive(type)
-         resetActiveCopy()
-         setActiveCopy(type)
-      }
-
-      async function handleLogInClick(source) {
-         gtag("event", `Clicked ${source} button`, {});
-         amplitude.track(`Clicked ${source} button`);
-
-         if (!lock) {
-            await initializeAuth0()
-         }
-
-         lock.checkSession({
-            redirect_uri: redirectUrl,
-            responseType: "token id_token",
-         }, function (err, authResult) {
-            if (err) {
-               lock.show()
-            }
-            else {
-               window.location.href = '/ui'
-            }
-         })
-      }
-
-      async function handleSignUpClick() {
-         gtag("event", "Clicked Sign Up button", {});
-         amplitude.track("Clicked Sign Up button");
-
-         if (!lock) {
-            await initializeAuth0()
-         }
-
-         lock.show({ initialScreen: "signUp" });
-      }
-
-
-      function trackEvent(name) {
-         amplitude.track(name)
-      }
-
-      const imageUrlMap = {
-         serverClasses: "static-files/spot-1-server-configs.gif",
-         makeBid: "static-files/spot-2-bid-easily.png",
-         useKubectl: "static-files/spot-3-consume-via-kubectl-short.gif",
-         priceChange: "static-files/spot-4-stay-informed.png",
-         automate: "static-files/spot-5-operate-with-terraform.png",
-      }
-
-      function toggleFeature(element, feature) {
-         const parentElement = element.parentElement
-         const collection = document.getElementsByClassName("how-it-works-feature")
-         for (let el of collection) {
-            if (el === parentElement) {
-               if (el.classList.contains("active")) {
-                  el.classList.remove("active")
-               } else {
-                  el.classList.add("active")
-               }
-            } else {
-               if (el.classList.contains("active")) {
-                  el.classList.remove("active")
-               }
-            }
-         }
-         const imageUrl = imageUrlMap[feature]
-         updateHowItWorksVisual(imageUrl)
-      }
-
-      function toggleFeatureMobile(element) {
-         const parentElement = element.parentElement
-         const collection = document.getElementsByClassName(
-            "how-it-works-feature-mobile"
-         )
-         for (let el of collection) {
-            if (el === parentElement) {
-               if (el.classList.contains("active")) {
-                  el.classList.remove("active")
-               } else {
-                  el.classList.add("active")
-               }
-            } else {
-               if (el.classList.contains("active")) {
-                  el.classList.remove("active")
-               }
-            }
-         }
-      }
-
-      function updateHowItWorksVisual(imagePath) {
-         const visualElement = document.getElementById("how-it-works-visual")
-         visualElement.src = imagePath
-      }
-   </script>
+   <script type="text/javascript" src="/static-files/js/main.js"></script>
 </body>
 
 </html>
