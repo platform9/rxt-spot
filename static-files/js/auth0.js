@@ -34,7 +34,7 @@ async function getClientInfo() {
   }
 }
 
-async function initializeAuth0Lock({ client_id, domain }) {
+async function initializeAuth0Lock({ client_id, domain } = {}) {
   if (!client_id || !domain) {
     console.error("Cannot initialize Auth0 Lock: client_id or domain not found")
     return

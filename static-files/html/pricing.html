@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon"
+      href="https://rackspace.com/themes/custom/hansel/favicon.ico"
+      type="image/vnd.microsoft.icon">
+    <title>Rackspace Spot | Rackspace</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" media="all" href="../css/style.css">
+    <link rel="stylesheet" media="all" href="../css/pricing.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>
+    ; (function (w, d, s, l, i) {
+      w[l] = w[l] || []
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      })
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : ""
+      j.async = true
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
+      f.parentNode.insertBefore(j, f)
+    })(window, document, "script", "dataLayer", "GTM-PSBG6RSN")
+  </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EY7B3KH18K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("set", "linker", {
+      domains: ["spot.rackspace.com", "cloudspaces.us.auth0.com"],
+    })
+    gtag("js", new Date())
+    gtag("config", "G-EY7B3KH18K")
+  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11470842307"></script>
+    <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("set", "linker", {
+      domains: ["spot.rackspace.com", "cloudspaces.us.auth0.com"],
+    })
+    gtag("js", new Date())
+    gtag("config", "AW-11470842307")
+  </script>
+    <script type="text/javascript" src="../js/amplitude.js"></script>
+    <!-- Auth0 -->
+    <script src="https://cdn.auth0.com/js/lock/12.4.0/lock.min.js"></script>
+    <script src="../js/auth0.js"></script>
+    <!-- Include jQuery for DataTables -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- DataTables CSS and JS -->
+    <link rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css">
+    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+    <link rel="preload" href="nav.html" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="footer.html" as="fetch" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <main>
+      <div class="hero">
+        <div class="header-padding"></div>
+        <div class="hero-content body-width-container">
+          <div class="hero-description">
+            <h1>Pricing</h1>
+            <h2>
+              Compute capacity is priced dynamically, <br />
+              based on an open market auction.
+            </h2>
+          </div>
+          <div class="hero-box-container">
+            <div class="hero-box">
+              <h3>Bid from $0.001/hr</h3>
+              <div class="box-description">
+                <a class="box-button" href="#"
+                  onclick="handleLogInClick('Get Started with Rackspace Spot')">Get
+                  started
+                  with Rackspace Spot</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="pricing-container">
+        <h3>Current Market Prices</h3>
+        <br />
+        <p>
+          Compute capacity is priced dynamically based on an open market
+          auction. All compute flavors in all regions are subject to a minimum
+          base price of $0.001 / hr. The actual price for any instance at any
+          given point in time will vary, and is determined by the lowest price
+          determined by Open Market Auction. These are the most up-to-date
+          prices.
+        </p>
+        <br />
+        <p>
+          <b>Apply filters to customize pricing options to fit your needs. </b>
+        </p>
+        <div class="filters">
+          <div class="filter">
+            <span>Region</span>
+            <select id="regionSelector" class="form-select">
+              <option id="allRegions" value="all">All</option>
+            </select>
+          </div>
+          <div class="filter">
+            <span>Class</span>
+            <select id="classSelector" class="form-select">
+              <option id="allClasses" value="all">All</option>
+            </select>
+          </div>
+          <div class="filter">
+            <span>Pricing Period</span>
+            <select id="pricingPeriodSelector" class="form-select">
+              <option value="per hour">Per Hour</option>
+              <option value="per month">Per Month</option>
+            </select>
+          </div>
+        </div>
+        <table id="pricingTable"
+          class="table table-striped table-bordered table-responsive">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Region</th>
+              <th>vCPUs</th>
+              <th>Memory (GB)</th>
+              <th>Current Market Price</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/pricing.js"></script>
+  </body>
+</html>

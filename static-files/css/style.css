@@ -44,8 +44,10 @@ h5 {
 }
 
 .nav__fluid--container {
-  background-color: rgba(255, 255, 255, 0.92);
+  /* background-color: rgba(255, 255, 255, 0.92); */
+  background-color: #fff;
   border-bottom: 1px solid #efefef;
+  width: 100%;
 }
 
 .nav__base {
@@ -53,7 +55,8 @@ h5 {
   max-width: 1920px;
   width: 90%;
   display: grid;
-  grid-template-columns: 240px 1fr max-content 130px;
+  grid-template-columns: 140px 1fr max-content max-content 130px;
+  grid-gap: 16px;
   grid-template-rows: auto;
   max-width: 90%;
   width: 1920px;
@@ -92,6 +95,10 @@ h5 {
   border-bottom: 2px solid #eb0000;
 }
 
+.nav-reddit-list-item:hover {
+  border-bottom: none;
+}
+
 .nav__list-link {
   align-items: center;
   color: #333;
@@ -105,6 +112,38 @@ h5 {
   text-transform: uppercase;
   transition: border-color 0.2s;
   letter-spacing: 1px;
+}
+
+.nav-reddit-box {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 8px;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.reddit-logo {
+  width: 30px;
+}
+
+.nav-reddit-link {
+  text-decoration: none;
+  color: #FF4500;
+  font-weight: 500;
+}
+
+.nav-reddit-link:hover {
+  transform: scale(1.05); /* Slightly larger on hover */
+  color: #D82400;
+}
+
+.mobile-reddit-box {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 8px;
+  align-items: center;
+  padding: 20px 30px;
+  margin-bottom: 15px;
 }
 
 .nav__login-box {
@@ -164,25 +203,33 @@ h5 {
   display: block;
   list-style: none;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
+  padding: 15px 0;
 }
 
 .nav__mega-mbl--item {
-  width: 90%;
   margin: auto;
+}
+
+.nav__mega-mbl--item:hover {
+  background-color: #fff;
+}
+
+.nav__mega-mbl--item-sign-up-btn:hover {
+  background-color: unset;
 }
 
 .nav__mega-mbl--link {
   color: #000;
   display: inline-block;
-  padding: 15px 0;
+  padding: 20px 30px;
   text-decoration: none;
   transition: background-color 0.2s;
 }
 
 .mobile-sign-up-btn {
-  margin-bottom: 16px;
   width: 90%;
+  margin: 20px 30px;
 }
 
 .mobile-contact {
@@ -761,6 +808,10 @@ h5 {
   }
 
   .nav__contact-link {
+    display: none;
+  }
+
+  .nav-reddit-box {
     display: none;
   }
 
