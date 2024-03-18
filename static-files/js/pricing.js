@@ -11,7 +11,7 @@ const defaultPriceFormatOptions = {
   maximumFractionDigits: 3,
 }
 
-function formatPrice(price, pricePeriod = "per hour") {
+function formatPrice(price) {
   return price
     ? new Intl.NumberFormat("us-EN", defaultPriceFormatOptions).format(price)
     : ""
@@ -36,7 +36,7 @@ function extractServerPricingDetails(data) {
 
       // Add region to the set
       serverRegions.add(server.description)
-      // Add serer type to the set
+      // Add server type to the set
       serverClassTypes.add(server.category)
     }
   }
@@ -105,7 +105,11 @@ function initDataTable(data) {
 }
 
 async function getPricingData() {
-  const url = `https://ngpc-staging-public-data.s3.us-east-2.amazonaws.com/percentiles.json`
+  const url = `https://${
+    window.location.origin.includes("ngpc-staging")
+      ? "ngpc-staging"
+      : "ngpc-prod"
+  }-public-data.s3.us-east-2.amazonaws.com/percentiles.json`
   try {
     const response = await fetch(url)
     const data = await response.json()
