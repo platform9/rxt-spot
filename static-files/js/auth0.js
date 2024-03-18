@@ -17,9 +17,21 @@ const options = {
     passwordInputPlaceholder: "Password",
     forgotPasswordAction: "Forgot Password?",
     title: "",
+    signUpTerms: `<span>
+        By signing up, you agree to our
+        <a
+          href="https://spot.rackspace.com/docs/terms"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color:#337ab7"
+        >
+          Terms of Service
+        </a>
+      </span>`,
   },
   usernameStyle: "email",
   allowShowPassword: true,
+  showTerms: true,
 }
 
 async function getClientInfo() {
