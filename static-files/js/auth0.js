@@ -17,9 +17,21 @@ const options = {
     passwordInputPlaceholder: "Password",
     forgotPasswordAction: "Forgot Password?",
     title: "",
+    signUpTerms: `<span>
+        By signing up, you agree to our
+        <a
+          href="https://spot.rackspace.com/docs/terms"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color:#337ab7"
+        >
+          Terms of Service
+        </a>
+      </span>`,
   },
   usernameStyle: "email",
   allowShowPassword: true,
+  showTerms: true,
 }
 
 async function getClientInfo() {
@@ -34,7 +46,7 @@ async function getClientInfo() {
   }
 }
 
-async function initializeAuth0Lock({ client_id, domain }) {
+async function initializeAuth0Lock({ client_id, domain } = {}) {
   if (!client_id || !domain) {
     console.error("Cannot initialize Auth0 Lock: client_id or domain not found")
     return
