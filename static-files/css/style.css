@@ -804,7 +804,7 @@ h5 {
 
 @media only screen and (max-width: 991px) {
   .nav__base {
-    grid-template-columns: 240px 1fr max-content 60px;
+    grid-template-columns: minmax(max-content, 240px) 0px max-content 60px;
   }
 
   .nav__contact-link {
