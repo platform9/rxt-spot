@@ -17,27 +17,27 @@ function formatPrice(price) {
     : ""
 }
 
-function extractServerPricingDetails(data) {
+function extractServerPricingDetails(data = {}) {
   let pricingList = []
   const serverClassTypes = new Set()
   const serverRegions = new Set()
 
   for (const region in data.regions) {
-    for (const serverType in data.regions[region]) {
-      const server = data.regions[region][serverType]
+    for (const serverType in data.regions?.[region]) {
+      const server = data.regions?.[region]?.[serverType]
       pricingList.push({
-        category: server.category,
-        displayName: server.display_name,
-        cpu: server.cpu,
-        region: server.description,
-        marketPrice: server.market_price,
-        memory: server.memory,
+        category: server?.category,
+        displayName: server?.display_name,
+        cpu: server?.cpu,
+        region: server?.description,
+        marketPrice: server?.market_price,
+        memory: server?.memory,
       })
 
       // Add region to the set
-      serverRegions.add(server.description)
+      serverRegions.add(server?.description)
       // Add server type to the set
-      serverClassTypes.add(server.category)
+      serverClassTypes.add(server?.category)
     }
   }
 
@@ -57,12 +57,16 @@ function initDataTable(data) {
   pricingTable = $("#pricingTable").DataTable({
     data,
     columns: [
-      { title: "Class", data: "category" },
-      { title: "Type", data: "displayName" },
-      { title: "Region", data: "region" },
-      { title: "vCPUs", data: "cpu" },
-      { title: "Memory (GB)", data: "memory" },
-      { title: "Current Market Price", data: "marketPrice" },
+      { title: "Class", data: "category", defaultContent: "" },
+      { title: "Type", data: "displayName", defaultContent: "" },
+      { title: "Region", data: "region", defaultContent: "" },
+      { title: "vCPUs", data: "cpu", defaultContent: "" },
+      { title: "Memory (GB)", data: "memory", defaultContent: "" },
+      {
+        title: "Current Market Price",
+        data: "marketPrice",
+        defaultContent: "",
+      },
     ],
     columnDefs: [
       {
@@ -84,7 +88,7 @@ function initDataTable(data) {
         target: 5,
         type: "num-fmt",
         render: function (data, type, row) {
-          if (type === "display") {
+          if (type === "display" && data) {
             return `<span class="market-price">${formatPrice(
               data
             )}</span><span class="pricing-period"> / ${
