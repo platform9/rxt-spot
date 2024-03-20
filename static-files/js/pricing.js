@@ -105,6 +105,10 @@ function initDataTable(data) {
     searching: true,
     info: false,
     dom: "lrtp",
+    responsive: true,
+    rowReorder: {
+      selector: "td:nth-child(2)",
+    },
   })
 }
 
