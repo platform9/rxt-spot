@@ -855,7 +855,7 @@ h5 {
 
 .maintenance-banner {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: max-content 1fr;
   grid-gap: 16px;
   background-color: #eb0000;
   color: white;
