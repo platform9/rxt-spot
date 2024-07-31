@@ -852,14 +852,3 @@ h5 {
     display: none !important;
   }
 }
-
-.maintenance-banner {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  grid-gap: 16px;
-  background-color: #eb0000;
-  color: white;
-  padding: 24px 32px;
-  align-items: center
-
-}
