@@ -692,7 +692,7 @@ h5 {
 
 .use-cases {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 48px;
   row-gap: 24px;
   padding: 24px;

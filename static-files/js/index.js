@@ -121,7 +121,7 @@ function togglePriceChart(type) {
 
 const imageUrlMap = {
   serverClasses: "static-files/images/spot-1-server-configs.gif",
-  makeBid: "static-files/images/spot-2-bid-easily.png",
+  makeBid: "static-files/images/spot-2-bid-easily.gif",
   useKubectl: "static-files/images/spot-3-consume-via-kubectl-short.gif",
   priceChange: "static-files/images/spot-4-stay-informed.png",
   automate: "static-files/images/spot-5-operate-with-terraform.png",
