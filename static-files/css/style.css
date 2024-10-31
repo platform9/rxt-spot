@@ -381,8 +381,8 @@ h5 {
 
 .how-it-works-content {
   display: grid;
-  grid-template-columns: 500px 1fr;
-  gap: 40px;
+  grid-template-columns: 426px 1fr;
+  gap: 36px;
   margin-top: 32px;
 }
 
