@@ -6,6 +6,10 @@ body {
     margin: 0;
   }
 
+  main {
+    margin-top: 73px; /* Height of gpu banner. Remove when banner is removed */ 
+  }
+
   .pricing-container {
     width: 80%;
     margin: auto;

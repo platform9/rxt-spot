@@ -47,7 +47,7 @@ h5 {
 }
 
 main {
-  margin-top: 73px; /* Height of the nav */
+  margin-top: 73px; /* Height of gpu banner. Remove when banner is removed */ 
 }
 
 .nav__fluid--container {
@@ -862,9 +862,9 @@ main {
   display: grid;
   background-color: #035AA6;
   color: white;
-  padding: 24px 32px;
   align-items: center;
   text-align: center;
   font-size: 20px;
+  height: 73px;
   width: 100%
 } 
