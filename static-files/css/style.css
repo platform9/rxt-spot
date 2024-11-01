@@ -852,3 +852,13 @@ h5 {
     display: none !important;
   }
 }
+
+.gpu-banner {
+  display: grid;
+  background-color: #035AA6;
+  color: white;
+  padding: 24px 32px;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+} 
