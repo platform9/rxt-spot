@@ -6,8 +6,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
 }
 
@@ -46,6 +44,10 @@ h5 {
   width: 100%;
   z-index: 500;
   height: 73px;
+}
+
+.main {
+  margin-top: 73px; /* Height of the nav */
 }
 
 .nav__fluid--container {
