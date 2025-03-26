@@ -102,7 +102,7 @@ main {
   border-bottom: 2px solid #eb0000;
 }
 
-.nav-reddit-list-item:hover {
+.nav-github-list-item:hover {
   border-bottom: none;
 }
 
@@ -121,7 +121,7 @@ main {
   letter-spacing: 1px;
 }
 
-.nav-reddit-box {
+.nav-github-box {
   display: grid;
   grid-template-columns: max-content max-content;
   grid-gap: 8px;
@@ -129,22 +129,25 @@ main {
   padding-left: 16px;
 }
 
-.reddit-logo {
+.github-logo {
   width: 30px;
 }
 
-.nav-reddit-link {
+.nav-github-link {
   text-decoration: none;
-  color: #FF4500;
+  color: #000;
   font-weight: 500;
+  padding: 10px;
+  border-radius: 4px;
 }
 
-.nav-reddit-link:hover {
-  transform: scale(1.05); /* Slightly larger on hover */
-  color: #D82400;
+@media only screen and (min-width: 992px) {
+  .nav-github-link:hover {
+    background-color: #E6E7EA;
+  }
 }
 
-.mobile-reddit-box {
+.mobile-github-box {
   display: grid;
   grid-template-columns: max-content max-content;
   grid-gap: 8px;
@@ -823,7 +826,7 @@ main {
     display: none;
   }
 
-  .nav-reddit-box {
+  .nav-github-box {
     display: none;
   }
 
