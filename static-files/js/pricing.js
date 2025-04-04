@@ -80,7 +80,7 @@ function initDataTable(data) {
         searchable: true,
       },
       {
-        target: 4,
+        target: 4, // vCPUs column
         type: "num",
         render: function (data, type, row) {
           if (type === "sort") {
@@ -90,7 +90,7 @@ function initDataTable(data) {
         },
       },
       {
-        target: 5,
+        target: 6,
         type: "num-fmt",
         render: function (data, type, row) {
           if (type === "display" && data) {
