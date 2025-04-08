@@ -23,8 +23,10 @@ function extractServerPricingDetails(data = {}) {
   const serverRegions = new Set()
 
   for (const region in data.regions) {
-    for (const serverType in data.regions?.[region]) {
-      const server = data.regions?.[region]?.[serverType]
+    const generation = data.regions[region]?.generation
+    const serverClasses = data.regions[region]?.serverclasses
+    for (const serverType in serverClasses) {
+      const server = serverClasses[serverType]
       pricingList.push({
         category: server?.category,
         displayName: server?.display_name,
@@ -32,6 +34,7 @@ function extractServerPricingDetails(data = {}) {
         region: server?.description,
         marketPrice: server?.market_price,
         memory: server?.memory,
+        generation: generation,
       })
 
       // Add region to the set
@@ -60,8 +63,10 @@ function initDataTable(data) {
       { title: "Class", data: "category", defaultContent: "" },
       { title: "Type", data: "displayName", defaultContent: "" },
       { title: "Region", data: "region", defaultContent: "" },
+      { title: "Generation", data: "generation", defaultContent: "" },
       { title: "vCPUs", data: "cpu", defaultContent: "" },
       { title: "Memory (GB)", data: "memory", defaultContent: "" },
+
       {
         title: "Current Market Price",
         data: "marketPrice",
@@ -75,7 +80,7 @@ function initDataTable(data) {
         searchable: true,
       },
       {
-        target: 4,
+        target: 4, // vCPUs column
         type: "num",
         render: function (data, type, row) {
           if (type === "sort") {
@@ -85,7 +90,7 @@ function initDataTable(data) {
         },
       },
       {
-        target: 5,
+        target: 6,
         type: "num-fmt",
         render: function (data, type, row) {
           if (type === "display" && data) {
